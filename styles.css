@@ -38,10 +38,15 @@ h2 {
   margin: 1rem auto;
   max-width: 400px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.carte-produit h3 {
-  margin-top: 0;
+.image-produit {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
 }
 
 button {
@@ -62,4 +67,47 @@ footer {
   padding: 1rem;
   background-color: #e0e0e0;
   margin-top: 2rem;
+}
+
+/* Formulaire de contact */
+.contact {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact h2 {
+  text-align: center;
+  color: #0077cc;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Réseaux sociaux */
+.reseaux {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.icones-reseaux a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+.icones-reseaux a:hover {
+  text-decoration: underline;
 }
