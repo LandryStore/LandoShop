@@ -7,152 +7,100 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
       margin: 0;
       padding: 0;
-      background: #f8f8f8;
-      color: #333;
     }
-
     header {
-      background: #333;
+      background-color: #2c3e50;
       color: white;
       padding: 20px;
       text-align: center;
     }
-
-    h1 {
-      margin: 0;
-    }
-
-    main {
-      padding: 20px;
-    }
-
     .produits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .carte-produit {
-      background: white;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .image-produit {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
-    button {
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #333;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #555;
-    }
-
-    .contact, .reseaux {
-      margin-top: 40px;
-      background: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: 20px;
-      border-radius: 8px;
     }
-
+    .produit {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin: 10px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .produit img {
+      max-width: 100%;
+      border-bottom: 1px solid #ddd;
+    }
+    .produit h3 {
+      margin: 10px 0;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #27ae60;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
     footer {
       text-align: center;
       padding: 20px;
-      background: #333;
-      color: white;
-      margin-top: 40px;
+      background: #eee;
+      margin-top: 30px;
     }
-
-    .icones-reseaux a {
+    footer a {
       margin: 0 10px;
       color: #333;
       text-decoration: none;
     }
-
-    .icones-reseaux a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
-
-
   <header>
-    <h1>Bienvenue sur LandoShop</h1>
-    <p>Produits tendance, livraison rapide, prix avantageux</p>
+    <h1>LandoShop.com</h1>
+    <p>Produits tendance à prix avantageux, livrés rapidement</p>
   </header>
 
-  <main>
-    <section class="produits">
-      <h2>Nos Produits</h2>
+  <section class="produits">
+    <div class="produit">
+      <img src="https://via.placeholder.com/250x150" alt="Montre intelligente H9 Pro Max">
+      <h3>Montre intelligente H9 Pro Max</h3>
+      <a href="#" class="btn">Acheter</a>
+    </div>
+    <div class="produit">
+      <img src="https://via.placeholder.com/250x150" alt="Vêtement Fashion Unisexe">
+      <h3>Vêtement Fashion Unisexe</h3>
+      <a href="#" class="btn">Acheter</a>
+    </div>
+    <div class="produit">
+      <img src="https://via.placeholder.com/250x150" alt="Sac Disney Snoopy">
+      <h3>Sac Disney Snoopy</h3>
+      <a href="#" class="btn">Acheter</a>
+    </div>
+    <div class="produit">
+      <img src="https://via.placeholder.com/250x150" alt="Pantalon Homme Casual">
+      <h3>Pantalon Homme Casual</h3>
+      <a href="#" class="btn">Acheter</a>
+    </div>
+  </section>
 
-      <div class="carte-produit">
-        <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?auto=format&fit=crop&w=400&q=60" alt="Montre intelligente H9 Pro Max" class="image-produit" />
-        <h3>Montre intelligente H9 Pro Max</h3>
-        <p>Design moderne, suivi de la santé, waterproof.</p>
-        <button>Acheter</button>
-      </div>
-
-      <div class="carte-produit">
-        <img src="https://images.unsplash.com/photo-1618354691444-e8e30fdc466e?auto=format&fit=crop&w=400&q=60" alt="Pantalon casual homme" class="image-produit" />
-        <h3>Pantalon casual homme</h3>
-        <p>Coupe droite, taille élastique, style confortable.</p>
-        <button>Acheter</button>
-      </div>
-
-      <div class="carte-produit">
-        <img src="https://images.unsplash.com/photo-1598032892341-208d9aa847e1?auto=format&fit=crop&w=400&q=60" alt="Sac cartoon Disney Snoopy" class="image-produit" />
-        <h3>Sac cartoon Disney Snoopy</h3>
-        <p>Grand sac en toile style cartoon pour femme. Pratique, tendance et résistant.</p>
-        <button>Acheter</button>
-      </div>
-    </section>
-
-    <section class="contact">
-      <h2>Nous contacter</h2>
-      <form>
-        <label for="nom">Nom :</label><br />
-        <input type="text" id="nom" name="nom" /><br /><br />
-
-        <label for="email">Email :</label><br />
-        <input type="email" id="email" name="email" /><br /><br />
-
-        <label for="message">Message :</label><br />
-        <textarea id="message" name="message" rows="4"></textarea><br /><br />
-
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
-
-    <section class="reseaux">
-      <h2>Suivez-nous</h2>
-      <div class="icones-reseaux">
-        <a href="https://facebook.com" target="_blank">Facebook</a> |
-        <a href="https://instagram.com" target="_blank">Instagram</a> |
-        <a href="https://tiktok.com" target="_blank">TikTok</a> |
-        <a href="https://youtube.com" target="_blank">YouTube</a>
-      </div>
-    </section>
-  </main>
+  <div style="text-align:center;">
+    <a href="mailto:lando704@hotmail.com" class="btn">Nous contacter</a>
+  </div>
 
   <footer>
-    <p>© 2025 LandoShop. Tous droits réservés.</p>
+    <p>Suivez-nous :</p>
+    <a href="#">Facebook</a> |
+    <a href="#">Instagram</a> |
+    <a href="#">TikTok</a> |
+    <a href="#">YouTube</a>
   </footer>
 </body>
-
 </html>
