@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LandoShop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Bienvenue sur LandoShop !</h1>
+    <nav>
+      <a href="#produits">Acheter</a>
+      <a href="#contact">Nous contacter</a>
+      <a href="#reseaux">Nos réseaux sociaux</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="produits">
+      <h2>Nos produits</h2>
+      <div class="produit">
+        <h3>Keshuyou – Montre H9 Pro Max</h3>
+        <img src="https://via.placeholder.com/200x200?text=Montre+H9+Pro+Max" alt="Montre H9 Pro Max" />
+        <button>Ajouter au panier</button>
+      </div>
+      <div class="produit">
+        <h3>Vêtement unisexe brodé</h3>
+        <img src="https://via.placeholder.com/200x200?text=Vêtement+unisexe" alt="Vêtement unisexe brodé" />
+        <button>Ajouter au panier</button>
+      </div>
+      <div class="produit">
+        <h3>Sac Disney Snoopy</h3>
+        <img src="https://via.placeholder.com/200x200?text=Sac+Disney+Snoopy" alt="Sac Disney Snoopy" />
+        <button>Ajouter au panier</button>
+      </div>
+      <div class="produit">
+        <h3>Pantalon casual homme</h3>
+        <img src="https://via.placeholder.com/200x200?text=Pantalon+casual+homme" alt="Pantalon homme" />
+        <button>Ajouter au panier</button>
+      </div>
+      <button onclick="viderPanier()">🧺 Vider le panier</button>
+    </section>
+
+    <section id="conditions">
+      <h2>Conditions de livraison</h2>
+      <p>Livraison rapide sous 7 à 15 jours ouvrables. Suivi disponible. Retours possibles sous 14 jours.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Nous contacter</h2>
+      <form>
+        <input type="text" placeholder="Votre nom" required />
+        <input type="email" placeholder="Votre email" required />
+        <textarea placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <section id="reseaux">
+      <h2>Suivez-nous</h2>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 LandoShop. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    function viderPanier() {
+      alert("Votre panier a été vidé !");
+    }
+  </script>
+</body>
+</html>
