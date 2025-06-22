@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LandoShop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="banniere.png" alt="Bannière LandoShop" class="banner" />
+    <h1>Bienvenue sur LandoShop.com</h1>
+  </header>
+
+  <nav>
+    <button onclick="alert('Fonction Acheter à venir')">Acheter</button>
+    <button onclick="location.href='#contact'">Nous contacter</button>
+    <button onclick="location.href='#reseaux'">Réseaux sociaux</button>
+    <button onclick="viderPanier()">Vider le panier</button>
+  </nav>
+
+  <main>
+    <section id="produits">
+      <h2>Nos Produits</h2>
+      <div class="produit">
+        <img src="https://via.placeholder.com/150" alt="Montre H9 Pro Max">
+        <h3>Keshuyou – Montre intelligente H9 Pro Max</h3>
+        <p>Montre connectée avec fonctions avancées. Prix abordable.</p>
+        <button>Acheter</button>
+      </div>
+      <div class="produit">
+        <img src="https://via.placeholder.com/150" alt="Vêtement unisexe">
+        <h3>Fashion Luxury Embroidery</h3>
+        <p>Vêtement stylé et confortable pour tous les genres.</p>
+        <button>Acheter</button>
+      </div>
+      <div class="produit">
+        <img src="https://via.placeholder.com/150" alt="Sac Snoopy">
+        <h3>Disney Snoopy – Sac en toile</h3>
+        <p>Grand sac cartoon en toile. Parfait pour les sorties.</p>
+        <button>Acheter</button>
+      </div>
+      <div class="produit">
+        <img src="https://via.placeholder.com/150" alt="Pantalon casual">
+        <h3>Pantalon casual homme</h3>
+        <p>Coupe droite, slim fit, taille élastique. Confort optimal.</p>
+        <button>Acheter</button>
+      </div>
+    </section>
+
+    <section id="livraison">
+      <h2>Conditions de Livraison</h2>
+      <p>Livraison en 5 à 10 jours ouvrables selon la région. Suivi offert après expédition.</p>
+    </section>
+  </main>
+
+  <footer>
+    <section id="contact">
+      <h2>Nous contacter</h2>
+      <p>Courriel : <a href="mailto:lando704@hotmail.com">lando704@hotmail.com</a></p>
+    </section>
+    <section id="reseaux">
+      <h2>Nos Réseaux Sociaux</h2>
+      <p>
+        <a href="#">Facebook</a> | 
+        <a href="#">Instagram</a> | 
+        <a href="#">TikTok</a> | 
+        <a href="#">YouTube</a>
+      </p>
+    </section>
+  </footer>
+
+  <script>
+    function viderPanier() {
+      alert("Le panier a été vidé !");
+    }
+  </script>
+</body>
+</html>
