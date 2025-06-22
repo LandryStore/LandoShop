@@ -1,71 +1,130 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>LandoShop.com</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Bienvenue sur LandoShop.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #003399;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .produits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .produit {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 20px;
+            width: 260px;
+            text-align: center;
+        }
+        .produit img {
+            max-width: 100%;
+            height: auto;
+        }
+        .produit h3 {
+            color: #003399;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #003399;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-  <header>
+
+<header>
     <h1>Bienvenue sur LandoShop.com</h1>
     <nav>
-      <a href="#produits">Acheter</a>
-      <a href="#contact">Nous contacter</a>
-      <a href="#reseaux">Réseaux sociaux</a>
+        <a href="#produits">Acheter</a>
+        <a href="#contact">Nous contacter</a>
+        <a href="#reseaux">Réseaux sociaux</a>
     </nav>
-  </header>
+</header>
 
-  <main>
-    <section id="produits">
-      <h2>Nos Produits</h2>
+<section id="produits" class="produits">
 
-      <div class="produit">
-        <img src="https://cdn.pixabay.com/photo/2016/11/21/12/59/smart-watch-1841625_1280.jpg" alt="Montre intelligente H9 Pro Max">
+    <div class="produit">
+        <img src="https://ae01.alicdn.com/kf/Sf4f7bb9d79e34d2d8c413fdf1f12a116W.jpg" alt="Montre intelligente">
         <h3>Montre intelligente H9 Pro Max</h3>
         <p>Suivi santé, design élégant, connectée à votre téléphone.</p>
-        <button>Acheter</button>
-      </div>
+        <a href="#" class="btn">Acheter</a>
+    </div>
 
-      <div class="produit">
-        <img src="https://cdn.pixabay.com/photo/2016/11/29/05/07/fashion-1866572_1280.jpg" alt="Vêtement Fashion Unisexe">
+    <div class="produit">
+        <img src="https://ae01.alicdn.com/kf/H2a75e90f8c2247b48f4e4313966d86f4y.jpg" alt="Pantalon homme">
+        <h3>Pantalon casual homme</h3>
+        <p>Coupe droite, taille élastique, style confortable.</p>
+        <a href="#" class="btn">Acheter</a>
+    </div>
+
+    <div class="produit">
+        <img src="https://ae01.alicdn.com/kf/Sfcb442d08f3c4c8b9885ccf19a32ac07M.jpg" alt="Sac cartoon Snoopy">
+        <h3>Sac cartoon Disney Snoopy</h3>
+        <p>Grand sac en toile style cartoon pour femme. Pratique, tendance et résistant.</p>
+        <a href="#" class="btn">Acheter</a>
+    </div>
+
+    <div class="produit">
+        <img src="https://ae01.alicdn.com/kf/S744ceec5486841b49eeb9c92f637c73dc.jpg" alt="Vêtement fashion">
         <h3>Vêtement Fashion Unisexe</h3>
         <p>Style urbain tendance, confortable et chic.</p>
-        <button>Acheter</button>
-      </div>
+        <a href="#" class="btn">Acheter</a>
+    </div>
 
-      <div class="produit">
-        <img src="https://cdn.pixabay.com/photo/2017/08/10/01/46/backpack-2610257_1280.jpg" alt="Sac Disney Snoopy">
-        <h3>Sac Disney Snoopy</h3>
-        <p>Solide, grande capacité, idéal pour les sorties et l'école.</p>
-        <button>Acheter</button>
-      </div>
+</section>
 
-      <div class="produit">
-        <img src="https://cdn.pixabay.com/photo/2017/08/06/17/56/people-2590679_1280.jpg" alt="Pantalon Homme Casual">
-        <h3>Pantalon Homme Casual</h3>
-        <p>Coupe droite, taille élastique, parfait pour le quotidien.</p>
-        <button>Acheter</button>
-      </div>
-    </section>
+<section id="contact" style="padding: 30px; text-align: center;">
+    <h2>Nous contacter</h2>
+    <p>Écrivez-nous à <strong>lando704@hotmail.com</strong></p>
+</section>
 
-    <section id="contact">
-      <h2>Nous contacter</h2>
-      <p>Courriel : lando704@hotmail.com</p>
-    </section>
+<section id="reseaux" style="padding: 30px; text-align: center;">
+    <h2>Nos réseaux sociaux</h2>
+    <p>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+        <a href="https://www.tiktok.com" target="_blank">TikTok</a> |
+        <a href="https://www.youtube.com" target="_blank">YouTube</a> |
+        <a href="https://www.google.com" target="_blank">Google</a> |
+        <a href="https://www.apple.com/safari/" target="_blank">Safari</a>
+    </p>
+</section>
 
-    <section id="reseaux">
-      <h2>Suivez-nous sur les réseaux sociaux</h2>
-      <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">TikTok</a></li>
-        <li><a href="#">YouTube</a></li>
-      </ul>
-    </section>
-  </main>
+<footer>
+    &copy; 2025 LandoShop. Tous droits réservés.
+</footer>
 
-  <footer>
-    <p>&copy; 2025 LandoShop. Tous droits réservés.</p>
-  </footer>
 </body>
 </html>
