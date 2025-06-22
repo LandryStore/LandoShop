@@ -1,106 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LandoShop</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .produits {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-    }
-    .produit {
-      background: white;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin: 10px;
-      width: 250px;
-      text-align: center;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .produit img {
-      max-width: 100%;
-      border-bottom: 1px solid #ddd;
-    }
-    .produit h3 {
-      margin: 10px 0;
-    }
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: #27ae60;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-      margin-top: 30px;
-    }
-    footer a {
-      margin: 0 10px;
-      color: #333;
-      text-decoration: none;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>LandoShop.com</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>LandoShop.com</h1>
-    <p>Produits tendance à prix avantageux, livrés rapidement</p>
+    <h1>Bienvenue sur LandoShop.com</h1>
+    <nav>
+      <a href="#produits">Acheter</a>
+      <a href="#contact">Nous contacter</a>
+      <a href="#reseaux">Réseaux sociaux</a>
+    </nav>
   </header>
 
-  <section class="produits">
-    <div class="produit">
-      <img src="https://via.placeholder.com/250x150" alt="Montre intelligente H9 Pro Max">
-      <h3>Montre intelligente H9 Pro Max</h3>
-      <a href="#" class="btn">Acheter</a>
-    </div>
-    <div class="produit">
-      <img src="https://via.placeholder.com/250x150" alt="Vêtement Fashion Unisexe">
-      <h3>Vêtement Fashion Unisexe</h3>
-      <a href="#" class="btn">Acheter</a>
-    </div>
-    <div class="produit">
-      <img src="https://via.placeholder.com/250x150" alt="Sac Disney Snoopy">
-      <h3>Sac Disney Snoopy</h3>
-      <a href="#" class="btn">Acheter</a>
-    </div>
-    <div class="produit">
-      <img src="https://via.placeholder.com/250x150" alt="Pantalon Homme Casual">
-      <h3>Pantalon Homme Casual</h3>
-      <a href="#" class="btn">Acheter</a>
-    </div>
-  </section>
+  <main>
+    <section id="produits">
+      <h2>Nos Produits</h2>
 
-  <div style="text-align:center;">
-    <a href="mailto:lando704@hotmail.com" class="btn">Nous contacter</a>
-  </div>
+      <div class="produit">
+        <img src="https://cdn.pixabay.com/photo/2016/11/21/12/59/smart-watch-1841625_1280.jpg" alt="Montre intelligente H9 Pro Max">
+        <h3>Montre intelligente H9 Pro Max</h3>
+        <p>Suivi santé, design élégant, connectée à votre téléphone.</p>
+        <button>Acheter</button>
+      </div>
+
+      <div class="produit">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/05/07/fashion-1866572_1280.jpg" alt="Vêtement Fashion Unisexe">
+        <h3>Vêtement Fashion Unisexe</h3>
+        <p>Style urbain tendance, confortable et chic.</p>
+        <button>Acheter</button>
+      </div>
+
+      <div class="produit">
+        <img src="https://cdn.pixabay.com/photo/2017/08/10/01/46/backpack-2610257_1280.jpg" alt="Sac Disney Snoopy">
+        <h3>Sac Disney Snoopy</h3>
+        <p>Solide, grande capacité, idéal pour les sorties et l'école.</p>
+        <button>Acheter</button>
+      </div>
+
+      <div class="produit">
+        <img src="https://cdn.pixabay.com/photo/2017/08/06/17/56/people-2590679_1280.jpg" alt="Pantalon Homme Casual">
+        <h3>Pantalon Homme Casual</h3>
+        <p>Coupe droite, taille élastique, parfait pour le quotidien.</p>
+        <button>Acheter</button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Nous contacter</h2>
+      <p>Courriel : lando704@hotmail.com</p>
+    </section>
+
+    <section id="reseaux">
+      <h2>Suivez-nous sur les réseaux sociaux</h2>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <p>Suivez-nous :</p>
-    <a href="#">Facebook</a> |
-    <a href="#">Instagram</a> |
-    <a href="#">TikTok</a> |
-    <a href="#">YouTube</a>
+    <p>&copy; 2025 LandoShop. Tous droits réservés.</p>
   </footer>
 </body>
 </html>

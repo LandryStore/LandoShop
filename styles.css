@@ -2,112 +2,68 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
+  background-color: #f5f5f5;
   color: #333;
 }
 
 header {
-  background-color: #0077cc;
+  background-color: #0a74da;
   color: white;
+  padding: 20px;
   text-align: center;
-  padding: 2rem 1rem;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2em;
-}
-
-header p {
-  margin-top: 0.5rem;
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 main {
-  padding: 2rem;
+  padding: 20px;
 }
 
-h2 {
-  color: #0077cc;
-  text-align: center;
-}
-
-.carte-produit {
+.produit {
   background-color: white;
-  border-radius: 8px;
-  padding: 1rem;
-  margin: 1rem auto;
-  max-width: 400px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
   text-align: center;
 }
 
-.image-produit {
-  width: 100%;
+.produit img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
-  margin-bottom: 1rem;
+  border-radius: 5px;
 }
 
-button {
-  background-color: #0077cc;
+.produit button {
+  background-color: #0a74da;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 10px 15px;
+  margin-top: 10px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
-button:hover {
-  background-color: #005fa3;
+.produit button:hover {
+  background-color: #095aba;
+}
+
+#contact, #reseaux {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 5px;
 }
 
 footer {
+  background-color: #0a74da;
+  color: white;
   text-align: center;
-  padding: 1rem;
-  background-color: #e0e0e0;
-  margin-top: 2rem;
-}
-
-/* Formulaire de contact */
-.contact {
-  background-color: #ffffff;
-  padding: 2rem;
-  margin-top: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contact h2 {
-  text-align: center;
-  color: #0077cc;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Réseaux sociaux */
-.reseaux {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.icones-reseaux a {
-  color: #0077cc;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 1rem;
-}
-
-.icones-reseaux a:hover {
-  text-decoration: underline;
+  padding: 10px;
+  margin-top: 40px;
 }
