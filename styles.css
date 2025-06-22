@@ -1,69 +1,173 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>LandoShop - Boutique en ligne</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
 
-header {
-  background-color: #0a74da;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+    header {
+      background-color: #003399;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-main {
-  padding: 20px;
-}
+    #cart-count {
+      margin-top: 10px;
+      font-size: 18px;
+      color: yellow;
+    }
 
-.produit {
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  text-align: center;
-}
+    .produits {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px;
+    }
 
-.produit img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
+    .produit {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 15px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
 
-.produit button {
-  background-color: #0a74da;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  margin-top: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
+    .produit img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
 
-.produit button:hover {
-  background-color: #095aba;
-}
+    .btn {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-#contact, #reseaux {
-  background-color: #ffffff;
-  padding: 20px;
-  margin-top: 40px;
-  border-radius: 5px;
-}
+    #cart {
+      background: white;
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
 
-footer {
-  background-color: #0a74da;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  margin-top: 40px;
-}
+    footer {
+      background-color: #003399;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bienvenue sur LandoShop.com</h1>
+    <nav>
+      <a href="#produits">Acheter</a>
+      <a href="#contact">Nous contacter</a>
+      <a href="#reseaux">Réseaux sociaux</a>
+    </nav>
+    <div id="cart-count">Panier : 0 article</div>
+  </header>
+
+  <section id="produits" class="produits">
+    <div class="produit">
+      <img src="https://ae01.alicdn.com/kf/Sf4f7bb9d79e34d2d8c413fdf1f12a116W.jpg" alt="Montre">
+      <h3>Montre H9 Pro Max</h3>
+      <p>Design élégant et connectée.</p>
+      <button class="btn" onclick="ajouterAuPanier('Montre H9 Pro Max')">Ajouter au panier</button>
+    </div>
+
+    <div class="produit">
+      <img src="https://ae01.alicdn.com/kf/H2a75e90f8c2247b48f4e4313966d86f4y.jpg" alt="Pantalon">
+      <h3>Pantalon casual homme</h3>
+      <p>Confortable et style décontracté.</p>
+      <button class="btn" onclick="ajouterAuPanier('Pantalon casual homme')">Ajouter au panier</button>
+    </div>
+
+    <div class="produit">
+      <img src="https://ae01.alicdn.com/kf/Sfcb442d08f3c4c8b9885ccf19a32ac07M.jpg" alt="Sac Snoopy">
+      <h3>Sac cartoon Snoopy</h3>
+      <p>Grand sac en toile pour femme.</p>
+      <button class="btn" onclick="ajouterAuPanier('Sac cartoon Snoopy')">Ajouter au panier</button>
+    </div>
+
+    <div class="produit">
+      <img src="https://ae01.alicdn.com/kf/S744ceec5486841b49eeb9c92f637c73dc.jpg" alt="Vêtement unisexe">
+      <h3>Vêtement Fashion</h3>
+      <p>Style urbain tendance.</p>
+      <button class="btn" onclick="ajouterAuPanier('Vêtement Fashion')">Ajouter au panier</button>
+    </div>
+  </section>
+
+  <section id="cart">
+    <h2>Votre panier</h2>
+    <ul id="liste-panier">
+      <li>Aucun article pour l’instant.</li>
+    </ul>
+  </section>
+
+  <section id="contact" style="text-align:center;">
+    <h2>Nous contacter</h2>
+    <p>Écrivez-nous à <strong>lando704@hotmail.com</strong></p>
+  </section>
+
+  <section id="reseaux" style="text-align:center;">
+    <h2>Nos réseaux sociaux</h2>
+    <p>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+      <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+      <a href="https://www.tiktok.com" target="_blank">TikTok</a> |
+      <a href="https://www.youtube.com" target="_blank">YouTube</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 LandoShop. Tous droits réservés.
+  </footer>
+
+  <script>
+    let compteur = 0;
+    let panier = [];
+
+    function ajouterAuPanier(nomProduit) {
+      compteur++;
+      panier.push(nomProduit);
+      document.getElementById('cart-count').textContent = `Panier : ${compteur} article${compteur > 1 ? 's' : ''}`;
+
+      let liste = document.getElementById('liste-panier');
+      liste.innerHTML = "";
+      panier.forEach(item => {
+        let li = document.createElement("li");
+        li.textContent = item;
+        liste.appendChild(li);
+      });
+    }
+  </script>
+
+</body>
+</html>
