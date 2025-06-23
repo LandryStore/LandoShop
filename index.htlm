@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>LandoShop.com – Boutique en ligne</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #003366;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .product {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      width: 250px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .panier {
+      text-align: center;
+      background: #e0e0e0;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #66ccff;
+      margin: 0 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Bienvenue sur LandoShop.com</h1>
+  <nav>
+    <a href="#produits">Acheter</a>
+    <a href="#contact">Nous contacter</a>
+    <a href="#reseaux">Nos réseaux sociaux</a>
+  </nav>
+</header>
+
+<section id="produits">
+  <h2>Nos produits</h2>
+  <div class="products">
+    <div class="product">
+      <h3>1. Keshuyou – Montre intelligente H9 Pro Max</h3>
+      <img src="https://m.media-amazon.com/images/I/61vVjTsWrdL._AC_SX679_.jpg" alt="Montre H9 Pro Max">
+      <p>Montre connectée tendance, avec suivi santé et écran tactile.</p>
+      <button onclick="ajouterPanier('Montre H9 Pro Max')">Ajouter au panier</button>
+    </div>
+
+    <div class="product">
+      <h3>2. Fashion Luxury Embroidery – Vêtement unisexe</h3>
+      <img src="https://m.media-amazon.com/images/I/71U7bWGBvCL._AC_SX679_.jpg" alt="Vêtement Fashion Luxury">
+      <p>Style unique avec broderie de luxe, coupe unisexe.</p>
+      <button onclick="ajouterPanier('Vêtement Fashion')">Ajouter au panier</button>
+    </div>
+
+    <div class="product">
+      <h3>3. Disney Snoopy – Sac en toile cartoon</h3>
+      <img src="https://m.media-amazon.com/images/I/61X1IPG3MoL._AC_SY679_.jpg" alt="Sac Snoopy">
+      <p>Sac spacieux en toile avec motif Snoopy, parfait pour le quotidien.</p>
+      <button onclick="ajouterPanier('Sac Snoopy')">Ajouter au panier</button>
+    </div>
+
+    <div class="product">
+      <h3>4. Pantalon casual homme – Coupe droite</h3>
+      <img src="https://m.media-amazon.com/images/I/51QhDgPiU7L._AC_SY679_.jpg" alt="Pantalon homme">
+      <p>Confortable, taille élastique, coupe moderne et droite.</p>
+      <button onclick="ajouterPanier('Pantalon casual')">Ajouter au panier</button>
+    </div>
+  </div>
+</section>
+
+<div class="panier">
+  <h3>🛒 Votre panier</h3>
+  <ul id="liste-panier"></ul>
+  <button onclick="viderPanier()">Vider le panier</button>
+</div>
+
+<section id="livraison">
+  <h2>📦 Conditions de livraison</h2>
+  <p>Livraison rapide en 7 à 15 jours ouvrables. Suivi disponible dès l'expédition. Retour gratuit sous 15 jours.</p>
+</section>
+
+<section id="contact">
+  <h2>📧 Nous contacter</h2>
+  <p>Courriel : <a href="mailto:lando704@hotmail.com">lando704@hotmail.com</a></p>
+</section>
+
+<section id="reseaux">
+  <h2>📱 Suivez-nous</h2>
+  <p>
+    <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+    <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+    <a href="https://www.tiktok.com" target="_blank">TikTok</a> |
+    <a href="https://www.youtube.com" target="_blank">YouTube</a> |
+    <a href="https://www.google.com" target="_blank">Google</a>
+  </p>
+</section>
+
+<footer>
+  <p>© 2025 LandoShop.com | Tous droits réservés</p>
+</footer>
+
+<script>
+  let panier = [];
+
+  function ajouterPanier(produit) {
+    panier.push(produit);
+    afficherPanier();
+  }
+
+  function afficherPanier() {
+    const liste = document.getElementById('liste-panier');
+    liste.innerHTML = "";
+    panier.forEach((item, index) => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      liste.appendChild(li);
+    });
+  }
+
+  function viderPanier() {
+    panier = [];
+    afficherPanier();
+  }
+</script>
+
+</body>
+</html>
