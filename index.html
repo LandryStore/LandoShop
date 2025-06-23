@@ -2,109 +2,197 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LandoShop.com - Boutique Pro</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LandoShop.com - Boutique en ligne</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo LandoShop" class="logo"/>
-    <h1>Bienvenue sur LandoShop.com</h1>
+    <img src="banniere.png" alt="LandoShop.com" class="banner" />
     <nav>
-      <a href="#products">Acheter</a>
-      <a href="#contact">Nous contacter</a>
-      <a href="#faq">FAQ</a>
-      <a href="#delivery">Livraison</a>
+      <ul>
+        <li><a href="#products">Nos Produits</a></li>
+        <li><a href="#contact">Nous Contacter</a></li>
+        <li><a href="#livraison">Conditions de livraison</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section id="banner">
-    <img src="banner.png" alt="Bannière LandoShop" class="banner"/>
-  </section>
-
   <main>
-    <section id="products" class="product-grid">
-      <h2>Nos produits</h2>
-      <div class="product">
-        <img src="https://via.placeholder.com/200x200?text=Montre+H9+Pro+Max" alt="Montre H9 Pro Max"/>
+    <section id="welcome">
+      <h1>Bienvenue sur LandoShop.com</h1>
+      <p>Découvrez nos produits tendance à prix avantageux !</p>
+    </section>
+
+    <section id="products" class="products-grid">
+      <!-- Exemple de produit -->
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+1" alt="Produit 1" />
         <h3>Montre H9 Pro Max</h3>
-        <p>79.99$</p>
-        <button onclick="addToCart('Montre H9 Pro Max')">Ajouter au panier</button>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/200x200?text=Vêtement+Unisexe" alt="Vêtement Unisexe"/>
-        <h3>Vêtement Unisexe</h3>
-        <p>49.99$</p>
-        <button onclick="addToCart('Vêtement Unisexe')">Ajouter au panier</button>
-      </div>
+        <p>Montre intelligente avec multiples fonctions sport et santé.</p>
+        <button>Ajouter au panier</button>
+      </article>
 
-      <!-- Produits supplémentaires -->
-      <!-- Tu peux en ajouter encore plus ici -->
-      <div class="product">
-        <img src="https://via.placeholder.com/200x200?text=Produit+1" alt="Produit 1"/>
-        <h3>Produit 1</h3>
-        <p>34.99$</p>
-        <button onclick="addToCart('Produit 1')">Ajouter au panier</button>
-      </div>
+      <!-- Autres produits simulés (19 au total) -->
+      <!-- Nous ajoutons ici d'autres produits en variation -->
+      
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+2" alt="Produit 2" />
+        <h3>Produit Tendance 2</h3>
+        <p>Description du produit tendance numéro 2.</p>
+        <button>Ajouter au panier</button>
+      </article>
 
-      <!-- Répète cette structure pour 20 produits -->
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+3" alt="Produit 3" />
+        <h3>Produit Tendance 3</h3>
+        <p>Description du produit tendance numéro 3.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+4" alt="Produit 4" />
+        <h3>Produit Tendance 4</h3>
+        <p>Description du produit tendance numéro 4.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+5" alt="Produit 5" />
+        <h3>Produit Tendance 5</h3>
+        <p>Description du produit tendance numéro 5.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+6" alt="Produit 6" />
+        <h3>Produit Tendance 6</h3>
+        <p>Description du produit tendance numéro 6.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+7" alt="Produit 7" />
+        <h3>Produit Tendance 7</h3>
+        <p>Description du produit tendance numéro 7.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+8" alt="Produit 8" />
+        <h3>Produit Tendance 8</h3>
+        <p>Description du produit tendance numéro 8.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+9" alt="Produit 9" />
+        <h3>Produit Tendance 9</h3>
+        <p>Description du produit tendance numéro 9.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+10" alt="Produit 10" />
+        <h3>Produit Tendance 10</h3>
+        <p>Description du produit tendance numéro 10.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+11" alt="Produit 11" />
+        <h3>Produit Tendance 11</h3>
+        <p>Description du produit tendance numéro 11.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+12" alt="Produit 12" />
+        <h3>Produit Tendance 12</h3>
+        <p>Description du produit tendance numéro 12.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+13" alt="Produit 13" />
+        <h3>Produit Tendance 13</h3>
+        <p>Description du produit tendance numéro 13.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+14" alt="Produit 14" />
+        <h3>Produit Tendance 14</h3>
+        <p>Description du produit tendance numéro 14.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+15" alt="Produit 15" />
+        <h3>Produit Tendance 15</h3>
+        <p>Description du produit tendance numéro 15.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+16" alt="Produit 16" />
+        <h3>Produit Tendance 16</h3>
+        <p>Description du produit tendance numéro 16.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+17" alt="Produit 17" />
+        <h3>Produit Tendance 17</h3>
+        <p>Description du produit tendance numéro 17.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+18" alt="Produit 18" />
+        <h3>Produit Tendance 18</h3>
+        <p>Description du produit tendance numéro 18.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+19" alt="Produit 19" />
+        <h3>Produit Tendance 19</h3>
+        <p>Description du produit tendance numéro 19.</p>
+        <button>Ajouter au panier</button>
+      </article>
+
+      <article class="product">
+        <img src="https://via.placeholder.com/200x200.png?text=Produit+20" alt="Produit 20" />
+        <h3>Produit Tendance 20</h3>
+        <p>Description du produit tendance numéro 20.</p>
+        <button>Ajouter au panier</button>
+      </article>
     </section>
 
-    <section id="cart">
-      <h2>Panier</h2>
-      <ul id="cart-items"></ul>
-      <button onclick="clearCart()">Vider le panier</button>
-    </section>
-
-    <section id="delivery">
-      <h2>Conditions de livraison</h2>
-      <p>Livraison gratuite à partir de 50$. Livraison standard en 5 à 10 jours ouvrables.</p>
-    </section>
-
-    <section id="faq">
-      <h2>FAQ</h2>
-      <p><strong>Q :</strong> Quels modes de paiement acceptez-vous ?<br/>
-         <strong>R :</strong> Visa, Mastercard, PayPal.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Nous contacter</h2>
-      <form>
-        <input type="text" placeholder="Votre nom" required/>
-        <input type="email" placeholder="Votre courriel" required/>
-        <textarea placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
+    <section id="livraison">
+      <h2>Conditions de Livraison</h2>
+      <p>Livraison en 7 à 15 jours ouvrables selon votre région.</p>
     </section>
   </main>
 
   <footer>
-    <p>Suivez-nous : 
-      <a href="#">Facebook</a> | 
-      <a href="#">Instagram</a> | 
-      <a href="#">TikTok</a> | 
-      <a href="#">YouTube</a>
-    </p>
-    <p>&copy; 2025 LandoShop</p>
+    <section id="contact">
+      <h2>Nous Contacter</h2>
+      <form>
+        <input type="text" placeholder="Votre nom" required />
+        <input type="email" placeholder="Votre e-mail" required />
+        <textarea placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <div class="socials">
+      <h3>Suivez-nous</h3>
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">TikTok</a>
+    </div>
   </footer>
-
-  <script>
-    const cartItems = document.getElementById("cart-items");
-    const cart = [];
-
-    function addToCart(product) {
-      cart.push(product);
-      updateCart();
-    }
-
-    function updateCart() {
-      cartItems.innerHTML = cart.map(item => `<li>${item}</li>`).join("");
-    }
-
-    function clearCart() {
-      cart.length = 0;
-      updateCart();
-    }
-  </script>
 </body>
 </html>
