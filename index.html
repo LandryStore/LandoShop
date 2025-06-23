@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LandoShop - Boutique en ligne</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <img src="banniere.png" alt="Bannière LandoShop" class="banniere" />
+        <h1>Bienvenue sur LandoShop.com</h1>
+        <nav>
+            <a href="#produits">Nos Produits</a>
+            <a href="#livraison">Conditions de livraison</a>
+            <a href="#contact">Nous contacter</a>
+            <a href="#avis">Avis clients</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </header>
+
+    <section id="produits">
+        <h2>Nos Produits</h2>
+        <div class="produit">
+            <img src="produit1.jpg" alt="Montre intelligente H9 Pro Max" />
+            <h3>Keshuyou – Montre intelligente H9 Pro Max</h3>
+            <p>Technologie avancée et design élégant.</p>
+            <button onclick="ajouterAuPanier()">Ajouter au panier</button>
+        </div>
+        <div class="produit">
+            <img src="produit2.jpg" alt="Vêtement unisexe" />
+            <h3>Fashion Luxury Embroidery</h3>
+            <p>Confortable, stylé et pour tous.</p>
+            <button onclick="ajouterAuPanier()">Ajouter au panier</button>
+        </div>
+        <div class="produit">
+            <img src="produit3.jpg" alt="Sac Disney Snoopy" />
+            <h3>Disney Snoopy – Sac Cartoon</h3>
+            <p>Sac en toile grande capacité style cartoon.</p>
+            <button onclick="ajouterAuPanier()">Ajouter au panier</button>
+        </div>
+        <div class="produit">
+            <img src="produit4.jpg" alt="Pantalon casual homme" />
+            <h3>Pantalon casual homme</h3>
+            <p>Coupe droite, slim fit, taille élastique.</p>
+            <button onclick="ajouterAuPanier()">Ajouter au panier</button>
+        </div>
+        <button onclick="viderPanier()">🗑️ Vider le panier</button>
+        <p id="panier"></p>
+    </section>
+
+    <section id="livraison">
+        <h2>Conditions de Livraison</h2>
+        <p>Livraison gratuite à partir de 50$. Délai de 7 à 15 jours ouvrables.</p>
+    </section>
+
+    <section id="avis">
+        <h2>Avis Clients</h2>
+        <p>⭐️⭐️⭐️⭐️⭐️ - "Excellent service et produits de qualité!"</p>
+    </section>
+
+    <section id="faq">
+        <h2>FAQ</h2>
+        <p><strong>Q:</strong> Quels sont vos délais de livraison?</p>
+        <p><strong>R:</strong> Environ 7 à 15 jours ouvrables.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Nous Contacter</h2>
+        <form>
+            <input type="text" placeholder="Votre nom" required />
+            <input type="email" placeholder="Votre email" required />
+            <textarea placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Suivez-nous : 
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">TikTok</a> | 
+            <a href="#">YouTube</a>
+        </p>
+    </footer>
+
+    <script>
+        let panier = 0;
+        function ajouterAuPanier() {
+            panier++;
+            document.getElementById("panier").innerText = "Produits dans le panier : " + panier;
+        }
+        function viderPanier() {
+            panier = 0;
+            document.getElementById("panier").innerText = "Le panier est vide.";
+        }
+    </script>
+</body>
+</html>
