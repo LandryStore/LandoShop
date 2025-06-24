@@ -1,198 +1,267 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LandoShop.com - Produits tendance</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f5f5f5;
-    }
-    header {
-      background-color: #008080;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: cover;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      background-color: #006666;
-      padding: 10px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 20px;
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .product {
-      background-color: white;
-      padding: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
-    }
-    .product img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-    .product h3 {
-      margin: 10px 0 5px;
-    }
-    .product button {
-      background-color: #008080;
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      width: 100%;
-    }
-    #panier {
-      background: #fff8dc;
-      padding: 20px;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-    footer {
-      background-color: #222;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 10px;
-    }
-    .contact-form button {
-      padding: 10px;
-      background: #008080;
-      color: white;
-      border: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>LandoShop.com - Boutique en ligne</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background: #006699;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .banner {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .product {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            max-height: 150px;
+            object-fit: contain;
+        }
+        .product h3 {
+            margin: 10px 0 5px;
+            font-size: 1em;
+        }
+        .product button {
+            background: #006699;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="https://cdn.pixabay.com/photo/2020/08/31/09/00/banner-5533735_1280.jpg" alt="Bannière LandoShop">
-    <h1>Bienvenue sur LandoShop.com</h1>
-    <p>Produits tendance à prix avantageux, livrés rapidement</p>
-  </header>
+    <header>
+        <h1>Bienvenue sur LandoShop.com</h1>
+        <p>Découvrez nos produits tendance à prix avantageux</p>
+    </header>
 
-  <nav>
-    <a href="#produits">Nos Produits</a>
-    <a href="#contact">Contact</a>
-    <a href="#conditions">Livraison</a>
-  </nav>
+    <nav>
+        <a href="#produits">Nos Produits</a>
+        <a href="#contact">Contact</a>
+        <a href="#livraison">Livraison</a>
+    </nav>
 
-  <section id="produits">
-    <h2>Nos Produits</h2>
-    <div class="product-grid" id="liste-produits"></div>
-    <div id="panier">
-      <h3>Votre panier</h3>
-      <ul id="liste-panier"></ul>
-      <button onclick="viderPanier()">Vider le panier</button>
-    </div>
-  </section>
+    <img src="banniere.png" alt="Bannière LandoShop" class="banner">
 
-  <section id="contact">
-    <h2>Nous contacter</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Votre nom" required />
-      <input type="email" placeholder="Votre email" required />
-      <textarea placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
+    <section id="produits" class="product-grid">
+        <!-- Génération de produits -->
+        <div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+1" alt="Produit 1">
+                <h3>Produit tendance #1</h3>
+                <p>Prix : 19 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+2" alt="Produit 2">
+                <h3>Produit tendance #2</h3>
+                <p>Prix : 20 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+3" alt="Produit 3">
+                <h3>Produit tendance #3</h3>
+                <p>Prix : 21 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+4" alt="Produit 4">
+                <h3>Produit tendance #4</h3>
+                <p>Prix : 22 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+5" alt="Produit 5">
+                <h3>Produit tendance #5</h3>
+                <p>Prix : 23 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+6" alt="Produit 6">
+                <h3>Produit tendance #6</h3>
+                <p>Prix : 24 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+7" alt="Produit 7">
+                <h3>Produit tendance #7</h3>
+                <p>Prix : 25 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+8" alt="Produit 8">
+                <h3>Produit tendance #8</h3>
+                <p>Prix : 26 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+9" alt="Produit 9">
+                <h3>Produit tendance #9</h3>
+                <p>Prix : 27 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+10" alt="Produit 10">
+                <h3>Produit tendance #10</h3>
+                <p>Prix : 28 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+11" alt="Produit 11">
+                <h3>Produit tendance #11</h3>
+                <p>Prix : 29 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+12" alt="Produit 12">
+                <h3>Produit tendance #12</h3>
+                <p>Prix : 30 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+13" alt="Produit 13">
+                <h3>Produit tendance #13</h3>
+                <p>Prix : 31 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+14" alt="Produit 14">
+                <h3>Produit tendance #14</h3>
+                <p>Prix : 32 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+15" alt="Produit 15">
+                <h3>Produit tendance #15</h3>
+                <p>Prix : 33 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+16" alt="Produit 16">
+                <h3>Produit tendance #16</h3>
+                <p>Prix : 34 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+17" alt="Produit 17">
+                <h3>Produit tendance #17</h3>
+                <p>Prix : 35 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+18" alt="Produit 18">
+                <h3>Produit tendance #18</h3>
+                <p>Prix : 36 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+19" alt="Produit 19">
+                <h3>Produit tendance #19</h3>
+                <p>Prix : 37 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+20" alt="Produit 20">
+                <h3>Produit tendance #20</h3>
+                <p>Prix : 38 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+21" alt="Produit 21">
+                <h3>Produit tendance #21</h3>
+                <p>Prix : 39 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+22" alt="Produit 22">
+                <h3>Produit tendance #22</h3>
+                <p>Prix : 40 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+23" alt="Produit 23">
+                <h3>Produit tendance #23</h3>
+                <p>Prix : 41 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+24" alt="Produit 24">
+                <h3>Produit tendance #24</h3>
+                <p>Prix : 42 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+<div class="product">
+                <img src="https://via.placeholder.com/150?text=Produit+25" alt="Produit 25">
+                <h3>Produit tendance #25</h3>
+                <p>Prix : 43 $</p>
+                <button>Ajouter au panier</button>
+            </div>
+    </section>
 
-  <section id="conditions">
-    <h2>Conditions de livraison</h2>
-    <p>Nous livrons partout dans le monde. Les délais varient entre 5 et 15 jours ouvrés. Suivi disponible sur demande.</p>
-  </section>
+    <section id="contact" style="padding: 20px;">
+        <h2>Contactez-nous</h2>
+        <p>Écrivez-nous à : <a href="mailto:lando704@hotmail.com">lando704@hotmail.com</a></p>
+        <p>Suivez-nous sur :
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">TikTok</a> |
+            <a href="#">YouTube</a>
+        </p>
+    </section>
 
-  <footer>
-    <p>Suivez-nous sur :
-      <a href="#" style="color:#00ffff;">Facebook</a> |
-      <a href="#" style="color:#00ffff;">Instagram</a> |
-      <a href="#" style="color:#00ffff;">TikTok</a>
-    </p>
-    <p>© 2025 LandoShop.com</p>
-  </footer>
+    <section id="livraison" style="padding: 20px;">
+        <h2>Conditions de Livraison</h2>
+        <p>Livraison rapide partout au Canada. Délai moyen : 7 à 14 jours. Frais fixes : 5 $ par commande.</p>
+    </section>
 
-  <script>
-    const produits = [
-      { nom: "Montre H9 Pro Max", image: "https://via.placeholder.com/200x150?text=Montre+H9", prix: "49.99$" },
-      { nom: "Vêtement unisexe brodé", image: "https://via.placeholder.com/200x150?text=Vêtement+Fashion", prix: "39.99$" },
-      { nom: "Sac Disney Snoopy", image: "https://via.placeholder.com/200x150?text=Sac+Snoopy", prix: "24.99$" },
-      { nom: "Pantalon casual homme", image: "https://via.placeholder.com/200x150?text=Pantalon+Homme", prix: "29.99$" },
-      { nom: "T-shirt été motif soleil", image: "https://via.placeholder.com/200x150?text=T-shirt+été", prix: "19.99$" },
-      { nom: "Lunettes de soleil UV400", image: "https://via.placeholder.com/200x150?text=Lunettes+Soleil", prix: "14.99$" },
-      { nom: "Bouteille d’eau infuseur", image: "https://via.placeholder.com/200x150?text=Bouteille+eau", prix: "17.99$" },
-      { nom: "Casque Bluetooth sans fil", image: "https://via.placeholder.com/200x150?text=Casque+Bluetooth", prix: "34.99$" },
-      { nom: "Lampe LED USB", image: "https://via.placeholder.com/200x150?text=Lampe+LED", prix: "9.99$" },
-      { nom: "Tapis de yoga antidérapant", image: "https://via.placeholder.com/200x150?text=Tapis+Yoga", prix: "22.99$" },
-      { nom: "Chaussettes rigolotes", image: "https://via.placeholder.com/200x150?text=Chaussettes", prix: "6.99$" },
-      { nom: "Mini ventilateur portable", image: "https://via.placeholder.com/200x150?text=Ventilateur", prix: "12.99$" },
-      { nom: "Brosse nettoyante visage", image: "https://via.placeholder.com/200x150?text=Brosse+visage", prix: "15.99$" },
-      { nom: "Sac à dos imperméable", image: "https://via.placeholder.com/200x150?text=Sac+à+dos", prix: "39.99$" },
-      { nom: "Couteau de cuisine pro", image: "https://via.placeholder.com/200x150?text=Couteau", prix: "25.99$" },
-      { nom: "Montre LED pour enfant", image: "https://via.placeholder.com/200x150?text=Montre+enfant", prix: "10.99$" },
-      { nom: "Jeu d’échecs magnétique", image: "https://via.placeholder.com/200x150?text=Jeu+d’échecs", prix: "21.99$" },
-      { nom: "Enceinte portable waterproof", image: "https://via.placeholder.com/200x150?text=Enceinte+Bluetooth", prix: "18.99$" },
-      { nom: "Lampe de lecture LED", image: "https://via.placeholder.com/200x150?text=Lampe+lecture", prix: "13.99$" },
-      { nom: "Tapis souris RGB", image: "https://via.placeholder.com/200x150?text=Tapis+RGB", prix: "11.99$" }
-    ];
-
-    const listeProduits = document.getElementById("liste-produits");
-    const listePanier = document.getElementById("liste-panier");
-    const panier = [];
-
-    produits.forEach(produit => {
-      const div = document.createElement("div");
-      div.className = "product";
-      div.innerHTML = `
-        <img src="${produit.image}" alt="${produit.nom}">
-        <h3>${produit.nom}</h3>
-        <p>${produit.prix}</p>
-        <button onclick='ajouterAuPanier("${produit.nom}")'>Ajouter au panier</button>
-      `;
-      listeProduits.appendChild(div);
-    });
-
-    function ajouterAuPanier(nomProduit) {
-      panier.push(nomProduit);
-      afficherPanier();
-    }
-
-    function afficherPanier() {
-      listePanier.innerHTML = "";
-      panier.forEach(item => {
-        const li = document.createElement("li");
-        li.textContent = item;
-        listePanier.appendChild(li);
-      });
-    }
-
-    function viderPanier() {
-      panier.length = 0;
-      afficherPanier();
-    }
-  </script>
+    <footer>
+        <p>&copy; 2025 LandoShop.com - Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
