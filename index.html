@@ -3,265 +3,44 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>LandoShop.com - Boutique en ligne</title>
+    <title>LandoShop.com</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f5f5;
-            color: #333;
-        }
-        header {
-            background: #003366;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            background: #006699;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .banner {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 15px;
-            padding: 20px;
-        }
-        .product {
-            background: white;
-            padding: 10px;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .product img {
-            width: 100%;
-            max-height: 150px;
-            object-fit: contain;
-        }
-        .product h3 {
-            margin: 10px 0 5px;
-            font-size: 1em;
-        }
-        .product button {
-            background: #006699;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        footer {
-            background: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur LandoShop.com</h1>
-        <p>Découvrez nos produits tendance à prix avantageux</p>
+        <h1>LandoShop.com</h1>
+        <p>Produits tendance livrés rapidement à prix avantageux</p>
     </header>
-
     <nav>
         <a href="#produits">Nos Produits</a>
         <a href="#contact">Contact</a>
-        <a href="#livraison">Livraison</a>
     </nav>
-
-    <img src="banniere.png" alt="Bannière LandoShop" class="banner">
-
-    <section id="produits" class="product-grid">
-        <!-- Génération de produits -->
-        <div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+1" alt="Produit 1">
-                <h3>Produit tendance #1</h3>
-                <p>Prix : 19 $</p>
+    <main>
+        <section id="produits">
+            <h2>Nos Produits</h2>
+            <div class="produit">
+                <h3>Montre connectée H9 Pro Max</h3>
+                <p>Design élégant, résistante à l’eau.</p>
                 <button>Ajouter au panier</button>
             </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+2" alt="Produit 2">
-                <h3>Produit tendance #2</h3>
-                <p>Prix : 20 $</p>
+            <div class="produit">
+                <h3>Vêtement Fashion Unisexe</h3>
+                <p>Style urbain, confortable et chic.</p>
                 <button>Ajouter au panier</button>
             </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+3" alt="Produit 3">
-                <h3>Produit tendance #3</h3>
-                <p>Prix : 21 $</p>
+            <div class="produit">
+                <h3>Sac en toile Disney Snoopy</h3>
+                <p>Capacité généreuse, style cartoon.</p>
                 <button>Ajouter au panier</button>
             </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+4" alt="Produit 4">
-                <h3>Produit tendance #4</h3>
-                <p>Prix : 22 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+5" alt="Produit 5">
-                <h3>Produit tendance #5</h3>
-                <p>Prix : 23 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+6" alt="Produit 6">
-                <h3>Produit tendance #6</h3>
-                <p>Prix : 24 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+7" alt="Produit 7">
-                <h3>Produit tendance #7</h3>
-                <p>Prix : 25 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+8" alt="Produit 8">
-                <h3>Produit tendance #8</h3>
-                <p>Prix : 26 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+9" alt="Produit 9">
-                <h3>Produit tendance #9</h3>
-                <p>Prix : 27 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+10" alt="Produit 10">
-                <h3>Produit tendance #10</h3>
-                <p>Prix : 28 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+11" alt="Produit 11">
-                <h3>Produit tendance #11</h3>
-                <p>Prix : 29 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+12" alt="Produit 12">
-                <h3>Produit tendance #12</h3>
-                <p>Prix : 30 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+13" alt="Produit 13">
-                <h3>Produit tendance #13</h3>
-                <p>Prix : 31 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+14" alt="Produit 14">
-                <h3>Produit tendance #14</h3>
-                <p>Prix : 32 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+15" alt="Produit 15">
-                <h3>Produit tendance #15</h3>
-                <p>Prix : 33 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+16" alt="Produit 16">
-                <h3>Produit tendance #16</h3>
-                <p>Prix : 34 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+17" alt="Produit 17">
-                <h3>Produit tendance #17</h3>
-                <p>Prix : 35 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+18" alt="Produit 18">
-                <h3>Produit tendance #18</h3>
-                <p>Prix : 36 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+19" alt="Produit 19">
-                <h3>Produit tendance #19</h3>
-                <p>Prix : 37 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+20" alt="Produit 20">
-                <h3>Produit tendance #20</h3>
-                <p>Prix : 38 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+21" alt="Produit 21">
-                <h3>Produit tendance #21</h3>
-                <p>Prix : 39 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+22" alt="Produit 22">
-                <h3>Produit tendance #22</h3>
-                <p>Prix : 40 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+23" alt="Produit 23">
-                <h3>Produit tendance #23</h3>
-                <p>Prix : 41 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+24" alt="Produit 24">
-                <h3>Produit tendance #24</h3>
-                <p>Prix : 42 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-<div class="product">
-                <img src="https://via.placeholder.com/150?text=Produit+25" alt="Produit 25">
-                <h3>Produit tendance #25</h3>
-                <p>Prix : 43 $</p>
-                <button>Ajouter au panier</button>
-            </div>
-    </section>
-
-    <section id="contact" style="padding: 20px;">
-        <h2>Contactez-nous</h2>
-        <p>Écrivez-nous à : <a href="mailto:lando704@hotmail.com">lando704@hotmail.com</a></p>
-        <p>Suivez-nous sur :
-            <a href="#">Facebook</a> |
-            <a href="#">Instagram</a> |
-            <a href="#">TikTok</a> |
-            <a href="#">YouTube</a>
-        </p>
-    </section>
-
-    <section id="livraison" style="padding: 20px;">
-        <h2>Conditions de Livraison</h2>
-        <p>Livraison rapide partout au Canada. Délai moyen : 7 à 14 jours. Frais fixes : 5 $ par commande.</p>
-    </section>
-
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Courriel : <a href="mailto:lando704@hotmail.com">lando704@hotmail.com</a></p>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2025 LandoShop.com - Tous droits réservés.</p>
+        <p>© 2025 LandoShop.com</p>
     </footer>
 </body>
 </html>
