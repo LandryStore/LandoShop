@@ -24,7 +24,8 @@ main {
   padding: 20px;
 }
 
-.product-grid {
+.product-grid 
+{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
