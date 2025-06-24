@@ -1,46 +1,184 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>LandoShop.com</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LandoShop.com – Boutique en ligne</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #008cba;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      background: #006b94;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+    }
+    .produit {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .produits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .produit img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .panier {
+      background: #fff3cd;
+      padding: 15px;
+      margin-top: 30px;
+      border-radius: 5px;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+    button {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #218838;
+    }
+    form input, form textarea {
+      width: 100%;
+      margin: 5px 0 15px;
+      padding: 10px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>LandoShop.com</h1>
-        <p>Produits tendance livrés rapidement à prix avantageux</p>
-    </header>
-    <nav>
-        <a href="#produits">Nos Produits</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <main>
-        <section id="produits">
-            <h2>Nos Produits</h2>
-            <div class="produit">
-                <h3>Montre connectée H9 Pro Max</h3>
-                <p>Design élégant, résistante à l’eau.</p>
-                <button>Ajouter au panier</button>
-            </div>
-            <div class="produit">
-                <h3>Vêtement Fashion Unisexe</h3>
-                <p>Style urbain, confortable et chic.</p>
-                <button>Ajouter au panier</button>
-            </div>
-            <div class="produit">
-                <h3>Sac en toile Disney Snoopy</h3>
-                <p>Capacité généreuse, style cartoon.</p>
-                <button>Ajouter au panier</button>
-            </div>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Courriel : <a href="mailto:lando704@hotmail.com">lando704@hotmail.com</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 LandoShop.com</p>
-    </footer>
+  <header>
+    <h1>Bienvenue sur LandoShop.com</h1>
+    <p>Produits variés, prix avantageux, livraison rapide</p>
+  </header>
+
+  <nav>
+    <a href="#produits">Nos Produits</a>
+    <a href="#contact">Nous Contacter</a>
+    <a href="#livraison">Conditions de Livraison</a>
+  </nav>
+
+  <div class="container">
+    <section id="produits">
+      <h2>Nos Produits</h2>
+      <div class="produits" id="liste-produits">
+        <!-- Les produits seront insérés ici automatiquement -->
+      </div>
+    </section>
+
+    <section class="panier" id="panier">
+      <h3>Panier</h3>
+      <ul id="liste-panier"></ul>
+      <button onclick="viderPanier()">Vider le panier</button>
+    </section>
+
+    <section id="contact">
+      <h2>Nous contacter</h2>
+      <form>
+        <input type="text" placeholder="Votre nom" required />
+        <input type="email" placeholder="Votre email" required />
+        <textarea rows="4" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <section id="livraison">
+      <h2>Conditions de livraison</h2>
+      <p>Livraison entre 5 à 12 jours ouvrables. Suivi en ligne disponible. Livraison gratuite pour les commandes de plus de 50$.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 LandoShop.com | Suivez-nous :
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">TikTok</a>
+    </p>
+  </footer>
+
+  <script>
+    const produits = [];
+    for (let i = 1; i <= 40; i++) {
+      produits.push({
+        nom: "Produit " + i,
+        prix: (10 + i) + " $",
+        image: "https://via.placeholder.com/220x180.png?text=Produit+" + i
+      });
+    }
+
+    const listeProduits = document.getElementById("liste-produits");
+    const panier = [];
+    const listePanier = document.getElementById("liste-panier");
+
+    produits.forEach((produit, index) => {
+      const div = document.createElement("div");
+      div.className = "produit";
+      div.innerHTML = `
+        <img src="${produit.image}" alt="${produit.nom}">
+        <h4>${produit.nom}</h4>
+        <p>${produit.prix}</p>
+        <button onclick="ajouterAuPanier(${index})">Ajouter au panier</button>
+      `;
+      listeProduits.appendChild(div);
+    });
+
+    function ajouterAuPanier(index) {
+      panier.push(produits[index]);
+      afficherPanier();
+    }
+
+    function afficherPanier() {
+      listePanier.innerHTML = "";
+      panier.forEach(p => {
+        const li = document.createElement("li");
+        li.textContent = `${p.nom} - ${p.prix}`;
+        listePanier.appendChild(li);
+      });
+    }
+
+    function viderPanier() {
+      panier.length = 0;
+      afficherPanier();
+    }
+  </script>
 </body>
 </html>
