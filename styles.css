@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+header {
+  background-color: #2d6a4f;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.banner {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+}
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+h2 {
+  text-align: center;
+}
+.produits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.produit {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 10px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+}
+button {
+  background-color: #40916c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+footer a {
+  color: #90e0ef;
+}
