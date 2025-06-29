@@ -3,266 +3,419 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LandoShop – Produits Amazon</title>
+  <title>LandoShop – Boutique en ligne</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav class="main-nav">
-  <a href="#accueil">Accueil</a>
-  <a href="#contact">Contact</a>
-  <a href="#amazon">Amazon</a>
-  <a href="#recherche">Recherche</a>
-</nav>
+  <nav class="main-nav">
+    <a href="#amazon">Amazon</a>
+    <a href="#aliexpress">AliExpress</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<header class="top-banner" id="accueil">
-  <h1>Bienvenue sur LandoShop</h1>
-  <p>Découvrez nos meilleures sélections de produits Amazon – tendances, utiles et pratiques</p>
-</header>
+  <header class="top-banner">
+    <h1>Bienvenue sur LandoShop</h1>
+    <p>Explorez les meilleures offres de produits en ligne !</p>
+  </header>
 
-<section class="search-container" id="recherche">
-  <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Rechercher un produit...">
-</section>
-
-<section class="section" id="amazon">
-  <h2>Produits Amazon</h2>
-
-  <div class="categories">
-    <button onclick="filterCategory('all')">Tous</button>
-    <button onclick="filterCategory('electronique')">Électronique</button>
-    <button onclick="filterCategory('maison')">Maison</button>
-    <button onclick="filterCategory('mode')">Mode</button>
-    <button onclick="filterCategory('sante')">Santé</button>
-    <button onclick="filterCategory('autres')">Autres</button>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Rechercher un produit...">
   </div>
 
-  <div class="product-list">
-   <!-- Produit 1 -->
-    <div class="product electronique">
-      <img src="https://m.media-amazon.com/images/I/71Wz2AEQx2L._AC_SL1500_.jpg" alt="Montre connectée">
-      <h3>Montre connectée Bluetooth</h3>
-      <p>Écran tactile, suivi santé, notifications.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B0CGL6K7X1?tag=0c2-20" target="_blank">Voir sur Amazon</a>
+  <section class="section" id="amazon">
+    <h2>Produits Amazon</h2>
+
+    <div class="categories">
+      <button onclick="filterProducts('electronique')">Électronique</button>
+      <button onclick="filterProducts('mode')">Mode</button>
+      <button onclick="filterProducts('maison')">Maison</button>
+      <button onclick="filterProducts('divers')">Divers</button>
+      <button onclick="filterProducts('tous')">Tout afficher</button>
     </div>
 
-    <!-- Produit 2 -->
-    <div class="product maison">
-      <img src="https://m.media-amazon.com/images/I/81z8gYKvQvL._AC_SL1500_.jpg" alt="Lampe de chevet LED">
-      <h3>Lampe de chevet LED tactile</h3>
-      <p>Couleurs réglables, recharge USB.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B07ZQRL9XY?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+    <div class="product-list" id="productContainer">
+  <!-- Produit 1 -->
+      <div class="product electronique">
+        <img src="https://m.media-amazon.com/images/I/71V--WZVUIL._AC_SX679_.jpg" alt="Montre connectée homme">
+        <h3>Montre connectée homme</h3>
+        <p>Montre intelligente sport étanche pour Android et iOS</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B09ZYWVZ2X?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 3 -->
-    <div class="product electronique">
-      <img src="https://m.media-amazon.com/images/I/71Q0UdfZ8CL._AC_SL1500_.jpg" alt="Écouteurs sans fil">
-      <h3>Écouteurs sans fil Bluetooth</h3>
-      <p>Autonomie longue, étui rechargeable.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B0BHLFMCXD?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 2 -->
+      <div class="product mode">
+        <img src="https://m.media-amazon.com/images/I/61aJhR1AEzL._AC_SX569_.jpg" alt="Veste légère homme">
+        <h3>Veste légère homme</h3>
+        <p>Veste coupe-vent à capuche, printemps/automne</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B0B4DQK8M9?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 4 -->
-    <div class="product sante">
-      <img src="https://m.media-amazon.com/images/I/61G3kL2-KPL._AC_SL1500_.jpg" alt="Pistolet de massage">
-      <h3>Pistolet de massage musculaire</h3>
-      <p>6 têtes, pour la récupération sportive.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B08L9TC9S4?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 3 -->
+      <div class="product maison">
+        <img src="https://m.media-amazon.com/images/I/81KfH0KUPFL._AC_SX679_.jpg" alt="Diffuseur d'huiles essentielles">
+        <h3>Diffuseur d'huiles essentielles</h3>
+        <p>Diffuseur silencieux avec lumières LED 7 couleurs</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08P3V2Y2N?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 5 -->
-    <div class="product mode">
-      <img src="https://m.media-amazon.com/images/I/61A1rkaI8rL._AC_SL1500_.jpg" alt="Lunettes de soleil polarisées">
-      <h3>Lunettes de soleil polarisées</h3>
-      <p>Protection UV400, design moderne.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B08BFM7MFT?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
-  <!-- Produit 51 -->
-    <div class="product maison">
-      <img src="https://m.media-amazon.com/images/I/81JyaZf1VKL._AC_SL1500_.jpg" alt="Diffuseur d’huiles essentielles">
-      <h3>Diffuseur d’huiles essentielles</h3>
-      <p>Ambiance relaxante, LED multicolores.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B07PGRBPH3?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 4 -->
+      <div class="product electronique">
+        <img src="https://m.media-amazon.com/images/I/71a4p7cVOAL._AC_SX679_.jpg" alt="Écouteurs Bluetooth sans fil">
+        <h3>Écouteurs Bluetooth sans fil</h3>
+        <p>Écouteurs avec boîtier de charge – son HD</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B0CGLT3SLZ?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 52 -->
-    <div class="product electronique">
-      <img src="https://m.media-amazon.com/images/I/71Jb-6Yy-AL._AC_SL1500_.jpg" alt="Support de téléphone flexible">
-      <h3>Support de téléphone flexible</h3>
-      <p>Rotation 360°, pour lit ou bureau.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B08ZJ9VK5J?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 5 -->
+      <div class="product mode">
+        <img src="https://m.media-amazon.com/images/I/61kK4ayr0gL._AC_SX679_.jpg" alt="Sac à dos tendance">
+        <h3>Sac à dos tendance</h3>
+        <p>Sac stylé et fonctionnel pour l’école ou les voyages</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B09WQ8C62D?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 53 -->
-    <div class="product sante">
-      <img src="https://m.media-amazon.com/images/I/71c+Rm81YML._AC_SL1500_.jpg" alt="Tapis d’acupression">
-      <h3>Tapis d’acupression complet</h3>
-      <p>Massage naturel, soulage stress et tension.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B07P8B7YN5?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 6 -->
+      <div class="product divers">
+        <img src="https://m.media-amazon.com/images/I/71gtdPbTLOL._AC_SX679_.jpg" alt="Bouteille d’eau isotherme">
+        <h3>Bouteille d’eau isotherme</h3>
+        <p>Garde les boissons chaudes ou froides pendant 12h+</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B0815Y8X62?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 54 -->
-    <div class="product mode">
-      <img src="https://m.media-amazon.com/images/I/61uFw62n4iL._AC_SL1500_.jpg" alt="Sac à dos antivol">
-      <h3>Sac à dos antivol USB</h3>
-      <p>Chargeur intégré, compartiment ordinateur.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B074J9G35W?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 7 -->
+      <div class="product maison">
+        <img src="https://m.media-amazon.com/images/I/71hrM4RzA-L._AC_SX679_.jpg" alt="Lumière LED d’ambiance">
+        <h3>Lumière LED d’ambiance</h3>
+        <p>Parfaite pour une déco moderne et relaxante</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08ZDZCD1J?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 55 -->
-    <div class="product electronique">
-      <img src="https://m.media-amazon.com/images/I/71oYg3pRWIL._AC_SL1500_.jpg" alt="Mini projecteur portable">
-      <h3>Mini projecteur LED</h3>
-      <p>Cinéma à domicile, compact et léger.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B086P8HW4M?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
- <!-- Produit 101 -->
-    <div class="product maison">
-      <img src="https://m.media-amazon.com/images/I/71lLwD5Bt+L._AC_SL1500_.jpg" alt="Organisateur de tiroir">
-      <h3>Organisateur de tiroir pliable</h3>
-      <p>Parfait pour sous-vêtements ou accessoires.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B088KX7JWN?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 8 -->
+      <div class="product electronique">
+        <img src="https://m.media-amazon.com/images/I/81HL5J3V0oL._AC_SX679_.jpg" alt="Mini projecteur portable">
+        <h3>Mini projecteur portable</h3>
+        <p>Projecteur compact pour films à la maison</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08BFVYRDM?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 102 -->
-    <div class="product electronique">
-      <img src="https://m.media-amazon.com/images/I/81JDkkbWtdL._AC_SL1500_.jpg" alt="Clavier sans fil">
-      <h3>Clavier sans fil silencieux</h3>
-      <p>Connexion Bluetooth, idéal télétravail.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B07Y5VSRP9?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 9 -->
+      <div class="product maison">
+        <img src="https://m.media-amazon.com/images/I/61kGJ4rAdUL._AC_SX569_.jpg" alt="Tapis antidérapant">
+        <h3>Tapis antidérapant</h3>
+        <p>Confort et sécurité dans votre salle de bain</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B09HKFP6F5?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 103 -->
-    <div class="product mode">
-      <img src="https://m.media-amazon.com/images/I/81VGmndG1nL._AC_SL1500_.jpg" alt="Montre style militaire">
-      <h3>Montre digitale militaire étanche</h3>
-      <p>Design robuste pour sport et aventure.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B0855CQ36Z?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 10 -->
+      <div class="product divers">
+        <img src="https://m.media-amazon.com/images/I/81vhSGQUgZL._AC_SX679_.jpg" alt="Lampe de lecture à pince">
+        <h3>Lampe de lecture à pince</h3>
+        <p>Éclairage pratique pour lire au lit</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B089QSBMGH?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+ <!-- Produit 11 -->
+      <div class="product mode">
+        <img src="https://m.media-amazon.com/images/I/71EM1L3AmBL._AC_SY606_.jpg" alt="T-shirt oversize homme">
+        <h3>T-shirt oversize homme</h3>
+        <p>Style streetwear confortable et tendance</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B09Z8Q7L1Z?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 104 -->
-    <div class="product electronique">
-      <img src="https://m.media-amazon.com/images/I/71k45n6r7uL._AC_SL1500_.jpg" alt="Lampe bureau LED">
-      <h3>Lampe de bureau LED pliable</h3>
-      <p>3 modes d’éclairage, port USB.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B07S9X6YQX?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 12 -->
+      <div class="product electronique">
+        <img src="https://m.media-amazon.com/images/I/61gIIPItEHL._AC_SX679_.jpg" alt="Câble USB C rapide">
+        <h3>Câble USB C rapide</h3>
+        <p>Charge rapide pour appareils Android et tablettes</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08VD4JTYR?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 105 -->
-    <div class="product sante">
-      <img src="https://m.media-amazon.com/images/I/61jPIsXDQJL._AC_SL1000_.jpg" alt="Brosse à dents électrique">
-      <h3>Brosse à dents électrique rechargeable</h3>
-      <p>Minuteur intégré, douce pour les gencives.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B08LNV2RKG?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
-   <!-- Produit 151 -->
-    <div class="product maison">
-      <img src="https://m.media-amazon.com/images/I/81K9DYiOpVL._AC_SL1500_.jpg" alt="Boîte de rangement pliable">
-      <h3>Boîte de rangement pliable</h3>
-      <p>Poignée renforcée, tissu résistant.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B08XBC2M3N?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 13 -->
+      <div class="product maison">
+        <img src="https://m.media-amazon.com/images/I/81OGUzkRgPL._AC_SX569_.jpg" alt="Housse de coussin décorative">
+        <h3>Housse de coussin décorative</h3>
+        <p>Ajoute une touche élégante à votre salon</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B09T7CMVCF?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 152 -->
-    <div class="product electronique">
-      <img src="https://m.media-amazon.com/images/I/61kn7UgksLL._AC_SL1500_.jpg" alt="Chargeur sans fil rapide">
-      <h3>Chargeur sans fil rapide 15W</h3>
-      <p>Compatible iPhone et Android.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B08J49F6K9?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 14 -->
+      <div class="product divers">
+        <img src="https://m.media-amazon.com/images/I/71hO9KvvwJL._AC_SY606_.jpg" alt="Gourde pliable">
+        <h3>Gourde pliable</h3>
+        <p>Idéal pour les voyages et les randonnées</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08CKX2N7R?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 153 -->
-    <div class="product mode">
-      <img src="https://m.media-amazon.com/images/I/71DRmGEslWL._AC_SL1500_.jpg" alt="Bonnet hiver unisexe">
-      <h3>Bonnet d’hiver chaud unisexe</h3>
-      <p>Intérieur polaire, look urbain.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B09F9ZFL9Y?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 15 -->
+      <div class="product electronique">
+        <img src="https://m.media-amazon.com/images/I/61QH6D71QxL._AC_SX679_.jpg" alt="Support de téléphone flexible">
+        <h3>Support de téléphone flexible</h3>
+        <p>Se fixe partout pour une position idéale</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B0829XFY5C?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 154 -->
-    <div class="product sante">
-      <img src="https://m.media-amazon.com/images/I/71KHSM0PxWL._AC_SL1500_.jpg" alt="Tensiomètre électronique">
-      <h3>Tensiomètre électronique bras</h3>
-      <p>Écran LCD, mémoire jusqu’à 99 mesures.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B00GZ1VCVQ?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 16 -->
+      <div class="product mode">
+        <img src="https://m.media-amazon.com/images/I/61XU30kroSL._AC_SY741_.jpg" alt="Casquette tendance">
+        <h3>Casquette tendance</h3>
+        <p>Style unisexe avec plusieurs couleurs disponibles</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08P5X82YP?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- Produit 155 -->
-    <div class="product electronique">
-      <img src="https://m.media-amazon.com/images/I/71oFlKOm2EL._AC_SL1500_.jpg" alt="Caméra de sécurité WiFi">
-      <h3>Caméra de sécurité Wi-Fi HD</h3>
-      <p>Vision nocturne, alerte téléphone.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B08Z3JG8DH?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
-   <!-- Produit 251 -->
-    <div class="product maison">
-      <img src="https://m.media-amazon.com/images/I/71v+AO7cK1L._AC_SL1500_.jpg" alt="Cintres en velours">
-      <h3>Lot de cintres antidérapants en velours</h3>
-      <p>Robustes, parfaits pour vêtements légers.</p>
-      <a class="buy-button" href="https://www.amazon.ca/dp/B00JGGLVU4?tag=0c2-20" target="_blank">Voir sur Amazon</a>
-    </div>
+      <!-- Produit 17 -->
+      <div class="product maison">
+        <img src="https://m.media-amazon.com/images/I/81e28KjwvzL._AC_SX569_.jpg" alt="Tapis de yoga antidérapant">
+        <h3>Tapis de yoga antidérapant</h3>
+        <p>Confortable pour les séances de sport à la maison</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B082YVRGHK?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <!-- ... Produits 252 à 300 ici ... -->
+      <!-- Produit 18 -->
+      <div class="product electronique">
+        <img src="https://m.media-amazon.com/images/I/71nMT9ZuK1L._AC_SX679_.jpg" alt="Chargeur mural USB">
+        <h3>Chargeur mural USB</h3>
+        <p>4 ports pour charger plusieurs appareils en même temps</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08B1W7LWF?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-  </div> <!-- Fin de .product-list -->
-</section>
+      <!-- Produit 19 -->
+      <div class="product maison">
+        <img src="https://m.media-amazon.com/images/I/81uFcKBGwrL._AC_SX679_.jpg" alt="Organisateur de tiroir">
+        <h3>Organisateur de tiroir</h3>
+        <p>Rangement pratique pour vêtements et accessoires</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B091BCZ4P9?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-<section class="section" id="contact">
-  <h2>Nous contacter</h2>
-  <form class="contact-form">
-    <label for="nom">Nom :</label>
-    <input type="text" id="nom" name="nom" required>
+      <!-- Produit 20 -->
+      <div class="product mode">
+        <img src="https://m.media-amazon.com/images/I/61MtpKFYROL._AC_SY741_.jpg" alt="Lunettes de soleil polarisées">
+        <h3>Lunettes de soleil polarisées</h3>
+        <p>Protection UV400, look moderne</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08L47LJ9Y?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+  <!-- Produit 21 -->
+      <div class="product electronique">
+        <img src="https://m.media-amazon.com/images/I/71ShGBRpm-L._AC_SX679_.jpg" alt="Enceinte Bluetooth portable">
+        <h3>Enceinte Bluetooth portable</h3>
+        <p>Son stéréo puissant, étanche IPX7</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08QZ5V41Y?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <label for="email">Courriel :</label>
-    <input type="email" id="email" name="email" required>
+      <!-- Produit 22 -->
+      <div class="product mode">
+        <img src="https://m.media-amazon.com/images/I/61tvAY+9WLL._AC_SY741_.jpg" alt="Sweat à capuche homme">
+        <h3>Sweat à capuche homme</h3>
+        <p>Confortable pour l’automne et l’hiver</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B09LY9K3HB?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <label for="message">Message :</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
+      <!-- Produit 23 -->
+      <div class="product maison">
+        <img src="https://m.media-amazon.com/images/I/71UffdfQ43L._AC_SX569_.jpg" alt="Rideaux occultants">
+        <h3>Rideaux occultants</h3>
+        <p>Pour bloquer la lumière et isoler la pièce</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B07L8ZFXL1?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-    <button type="submit">Envoyer</button>
-  </form>
-</section>
+      <!-- Produit 24 -->
+      <div class="product divers">
+        <img src="https://m.media-amazon.com/images/I/713uBp0PQ7L._AC_SX679_.jpg" alt="Batterie externe 10000mAh">
+        <h3>Batterie externe 10000mAh</h3>
+        <p>Recharge rapide pour téléphone portable</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08R87T4BG?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-<footer class="footer">
-  <p>Merci de visiter LandoShop !</p>
-  <p>Suivez-nous sur :
-    <a href="#">Facebook</a> |
-    <a href="#">Instagram</a> |
-    <a href="#">TikTok</a> |
-    <a href="#">YouTube</a>
-  </p>
-</footer>
+      <!-- Produit 25 -->
+      <div class="product electronique">
+        <img src="https://m.media-amazon.com/images/I/61jU91F1TVL._AC_SX569_.jpg" alt="Webcam HD 1080p">
+        <h3>Webcam HD 1080p</h3>
+        <p>Avec micro intégré pour visioconférences</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B07TYQ7BMQ?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-<button onclick="topFunction()" id="scrollTopBtn" title="Retour en haut">↑</button>
+      <!-- Produit 26 -->
+      <div class="product maison">
+        <img src="https://m.media-amazon.com/images/I/91JhKPX5vJL._AC_SX679_.jpg" alt="Boîte de rangement empilable">
+        <h3>Boîte de rangement empilable</h3>
+        <p>Idéale pour organiser les petits espaces</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08T5MXY6Y?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-<script>
-function filterCategory(category) {
-  const products = document.querySelectorAll('.product');
-  products.forEach(product => {
-    if (category === 'all' || product.classList.contains(category)) {
-      product.style.display = 'block';
-    } else {
-      product.style.display = 'none';
-    }
-  });
-}
+      <!-- Produit 27 -->
+      <div class="product mode">
+        <img src="https://m.media-amazon.com/images/I/613UwZfMW7L._AC_SY679_.jpg" alt="Pantalon de sport homme">
+        <h3>Pantalon de sport homme</h3>
+        <p>Confortable pour le jogging ou la maison</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08PC9XB5S?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-function searchProducts() {
-  const input = document.getElementById("searchInput").value.toLowerCase();
-  const products = document.querySelectorAll(".product");
-  products.forEach(product => {
-    const text = product.textContent.toLowerCase();
-    product.style.display = text.includes(input) ? "block" : "none";
-  });
-}
+      <!-- Produit 28 -->
+      <div class="product electronique">
+        <img src="https://m.media-amazon.com/images/I/61Z2HxhZgML._AC_SX569_.jpg" alt="Trépied flexible pour smartphone">
+        <h3>Trépied flexible pour smartphone</h3>
+        <p>Parfait pour les vidéos, TikTok, YouTube</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B01M0PABAB?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-let mybutton = document.getElementById("scrollTopBtn");
-window.onscroll = function () {
-  mybutton.style.display = document.documentElement.scrollTop > 100 ? "block" : "none";
-};
-function topFunction() {
-  document.documentElement.scrollTop = 0;
-}
-</script>
+      <!-- Produit 29 -->
+      <div class="product maison">
+        <img src="https://m.media-amazon.com/images/I/71XQH72J8eL._AC_SX569_.jpg" alt="Horloge murale moderne">
+        <h3>Horloge murale moderne</h3>
+        <p>Silencieuse avec design élégant</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08R6JD7C8?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
 
-</body>
+      <!-- Produit 30 -->
+      <div class="product divers">
+        <img src="https://m.media-amazon.com/images/I/71+pPhk3C2L._AC_SX679_.jpg" alt="Balance de cuisine digitale">
+        <h3>Balance de cuisine digitale</h3>
+        <p>Précision 1g, écran LCD rétroéclairé</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B07GJ4K54M?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+     <!-- Produit 101 -->
+      <div class="product electronique">
+        <img src="https://m.media-amazon.com/images/I/71oih4Ehj9L._AC_SX679_.jpg" alt="Caméra de sécurité WiFi">
+        <h3>Caméra de sécurité WiFi</h3>
+        <p>Caméra intérieure avec vision nocturne HD</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08R7K3X87?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+
+      <!-- Produit 102 -->
+      <div class="product maison">
+        <img src="https://m.media-amazon.com/images/I/81xYO82AcsL._AC_SX569_.jpg" alt="Coussins de chaise en mousse">
+        <h3>Coussins de chaise en mousse</h3>
+        <p>Confort et soutien pour la maison ou le bureau</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B087Z9ND7L?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+
+      <!-- Produit 103 -->
+      <div class="product mode">
+        <img src="https://m.media-amazon.com/images/I/81u8bEDk45L._AC_SY741_.jpg" alt="Chandail à manches longues homme">
+        <h3>Chandail à manches longues</h3>
+        <p>Parfait pour l’automne, style casual</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B09R4MKWZ4?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+
+      <!-- Produit 104 -->
+      <div class="product electronique">
+        <img src="https://m.media-amazon.com/images/I/61GfSG6hZHL._AC_SX679_.jpg" alt="Chargeur de voiture USB">
+        <h3>Chargeur de voiture USB</h3>
+        <p>Double port rapide pour téléphone et tablette</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B07F7N3Y95?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+
+      <!-- Produit 105 -->
+      <div class="product divers">
+        <img src="https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SX679_.jpg" alt="Carnet de notes A5">
+        <h3>Carnet de notes A5</h3>
+        <p>Pages lignées pour écrire ou dessiner</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B081H3QYQY?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+
+      <!-- Produit 106 -->
+      <div class="product maison">
+        <img src="https://m.media-amazon.com/images/I/81lPKUMpG6L._AC_SX569_.jpg" alt="Panier à linge pliable">
+        <h3>Panier à linge pliable</h3>
+        <p>Léger et facile à transporter</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B084DNMZ4G?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+
+      <!-- Produit 107 -->
+      <div class="product mode">
+        <img src="https://m.media-amazon.com/images/I/61D8Bg+xEaL._AC_SY679_.jpg" alt="Chaussures de marche">
+        <h3>Chaussures de marche</h3>
+        <p>Confortables pour la marche quotidienne</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B07ZL1JXPG?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+
+      <!-- Produit 108 -->
+      <div class="product electronique">
+        <img src="https://m.media-amazon.com/images/I/61UhITe6yTL._AC_SX569_.jpg" alt="Clavier sans fil">
+        <h3>Clavier sans fil</h3>
+        <p>Compatible PC, Mac, tablette et téléphone</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B07ZVXQ4CW?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+
+      <!-- Produit 109 -->
+      <div class="product maison">
+        <img src="https://m.media-amazon.com/images/I/81tx1v6BozL._AC_SX569_.jpg" alt="Boîte à lunch isotherme">
+        <h3>Boîte à lunch isotherme</h3>
+        <p>Garde vos repas chauds ou froids</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B08K3GHB6T?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+
+      <!-- Produit 110 -->
+      <div class="product divers">
+        <img src="https://m.media-amazon.com/images/I/71wPoE+3aML._AC_SX679_.jpg" alt="Lampe de chevet tactile">
+        <h3>Lampe de chevet tactile</h3>
+        <p>Contrôle de l’intensité et couleurs LED</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B07T42TKK9?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+<!-- Produit 300 -->
+      <div class="product divers">
+        <img src="https://m.media-amazon.com/images/I/71hvDJ7Le7L._AC_SX679_.jpg" alt="Porte-clés multifonction">
+        <h3>Porte-clés multifonction</h3>
+        <p>Inclut décapsuleur, mini couteau et tournevis</p>
+        <a class="buy-button" href="https://www.amazon.ca/dp/B07XY3C7H5?tag=0c2-20" target="_blank">Acheter</a>
+      </div>
+    </section>
+
+    <!-- Formulaire de contact -->
+    <section id="contact">
+      <h2>Nous contacter</h2>
+      <form>
+        <input type="text" placeholder="Votre nom" required>
+        <input type="email" placeholder="Votre courriel" required>
+        <textarea placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+      <p>Merci de visiter LandoShop.com ❤️</p>
+      <div class="social-links">
+        <a href="#" target="_blank">Facebook</a> |
+        <a href="#" target="_blank">Instagram</a> |
+        <a href="#" target="_blank">TikTok</a> |
+        <a href="#" target="_blank">YouTube</a> |
+        <a href="mailto:lando704@hotmail.com">Email</a>
+      </div>
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <button onclick="scrollToTop()" class="scroll-top">↑</button>
+
+    <!-- JavaScript -->
+    <script>
+      // Retour en haut
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Panier simple
+      let cart = [];
+
+      function addToCart(productName) {
+        cart.push(productName);
+        alert(productName + " a été ajouté au panier !");
+      }
+
+      function emptyCart() {
+        cart = [];
+        alert("Panier vidé !");
+      }
+
+      // Recherche de produit
+      function searchProduct() {
+        const input = document.getElementById("searchInput").value.toLowerCase();
+        const products = document.getElementsByClassName("product");
+
+        for (let i = 0; i < products.length; i++) {
+          let title = products[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+          products[i].style.display = title.includes(input) ? "block" : "none";
+        }
+      }
+    </script>
+  </body>
 </html>
