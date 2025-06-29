@@ -1,403 +1,268 @@
-  <!-- 🟡 SECTION AMAZON -->
-  <section id="produits-amazon">
-  
-    <h2>Nos sélections Amazon affiliées</h2>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LandoShop – Produits Amazon</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <!-- Produit Amazon 1 -->
-   
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Casque Bluetooth sans fil</h3>
-      <img src="https://m.media-amazon.com/images/I/61Z7dDgbzoL._AC_SL1500_.jpg" alt="Casque Bluetooth" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Confortable, batterie longue durée, idéal musique et appels.</p>
-      <a href="https://www.amazon.ca/dp/B09YXYZABC/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+<nav class="main-nav">
+  <a href="#accueil">Accueil</a>
+  <a href="#contact">Contact</a>
+  <a href="#amazon">Amazon</a>
+  <a href="#recherche">Recherche</a>
+</nav>
 
-    <!-- Produit Amazon 2 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Montre intelligente sport</h3>
-      <img src="https://m.media-amazon.com/images/I/71wMT0R4sFL._AC_SL1500_.jpg" alt="Montre sport" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Cardio, podomètre, notifications – idéale pour le fitness.</p>
-      <a href="https://www.amazon.ca/dp/B0BXYZ1234/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+<header class="top-banner" id="accueil">
+  <h1>Bienvenue sur LandoShop</h1>
+  <p>Découvrez nos meilleures sélections de produits Amazon – tendances, utiles et pratiques</p>
+</header>
 
-    <!-- Produit Amazon 3 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Support téléphone voiture magnétique</h3>
-      <img src="https://m.media-amazon.com/images/I/71ZZeU5RbXL._AC_SL1500_.jpg" alt="Support téléphone voiture" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Rotation 360°, fixation rapide, compatible tout téléphone.</p>
-      <a href="https://www.amazon.ca/dp/B08XYZ5678/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
- <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Mini aspirateur USB pour bureau</h3>
-      <img src="https://m.media-amazon.com/images/I/61jFQqtWfvL._AC_SL1500_.jpg" alt="Mini aspirateur USB" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Parfait pour clavier, voiture, petits recoins.</p>
-      <a href="https://www.amazon.ca/dp/B089ABC123/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+<section class="search-container" id="recherche">
+  <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Rechercher un produit...">
+</section>
 
-    <!-- Produit Amazon 5 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Lampe de lecture LED rechargeable</h3>
-      <img src="https://m.media-amazon.com/images/I/51M6VNV9v0L._AC_SL1000_.jpg" alt="Lampe LED lecture" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Légère, pince intégrée, intensité réglable.</p>
-      <a href="https://www.amazon.ca/dp/B07XYZ7890/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+<section class="section" id="amazon">
+  <h2>Produits Amazon</h2>
 
-    <!-- Produit Amazon 6 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Thermos bouteille inox 500ml</h3>
-      <img src="https://m.media-amazon.com/images/I/61FwlE-FQDL._AC_SL1000_.jpg" alt="Thermos inox" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Conserve chaleur ou fraîcheur pendant 12h+.</p>
-      <a href="https://www.amazon.ca/dp/B08YTHERMO1/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+  <div class="categories">
+    <button onclick="filterCategory('all')">Tous</button>
+    <button onclick="filterCategory('electronique')">Électronique</button>
+    <button onclick="filterCategory('maison')">Maison</button>
+    <button onclick="filterCategory('mode')">Mode</button>
+    <button onclick="filterCategory('sante')">Santé</button>
+    <button onclick="filterCategory('autres')">Autres</button>
+  </div>
+
+  <div class="product-list">
+   <!-- Produit 1 -->
+    <div class="product electronique">
+      <img src="https://m.media-amazon.com/images/I/71Wz2AEQx2L._AC_SL1500_.jpg" alt="Montre connectée">
+      <h3>Montre connectée Bluetooth</h3>
+      <p>Écran tactile, suivi santé, notifications.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B0CGL6K7X1?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 7 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Chargeur sans fil rapide Qi</h3>
-      <img src="https://m.media-amazon.com/images/I/61qIM34YwaL._AC_SL1500_.jpg" alt="Chargeur sans fil" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Compatible iPhone / Android, design compact.</p>
-      <a href="https://www.amazon.ca/dp/B09FASTCHARGER/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
- <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Ensemble de câbles de charge 3 en 1</h3>
-      <img src="https://m.media-amazon.com/images/I/71nR1ZUt99L._AC_SL1500_.jpg" alt="Câbles multi-charge" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Lightning, USB-C, Micro-USB dans un seul câble.</p>
-      <a href="https://www.amazon.ca/dp/B09CABLEUSB/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 2 -->
+    <div class="product maison">
+      <img src="https://m.media-amazon.com/images/I/81z8gYKvQvL._AC_SL1500_.jpg" alt="Lampe de chevet LED">
+      <h3>Lampe de chevet LED tactile</h3>
+      <p>Couleurs réglables, recharge USB.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B07ZQRL9XY?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 9 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Caméra de surveillance Wi-Fi intérieure</h3>
-      <img src="https://m.media-amazon.com/images/I/61kF9zGlVFL._AC_SL1500_.jpg" alt="Caméra Wi-Fi" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Vue 360°, détection de mouvement, audio 2 sens.</p>
-      <a href="https://www.amazon.ca/dp/B08CAMERAINT/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 3 -->
+    <div class="product electronique">
+      <img src="https://m.media-amazon.com/images/I/71Q0UdfZ8CL._AC_SL1500_.jpg" alt="Écouteurs sans fil">
+      <h3>Écouteurs sans fil Bluetooth</h3>
+      <p>Autonomie longue, étui rechargeable.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B0BHLFMCXD?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 10 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Support d’ordinateur portable réglable</h3>
-      <img src="https://m.media-amazon.com/images/I/61+O7WkhypL._AC_SL1500_.jpg" alt="Support laptop" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Ergonomique, pliable, compatible PC & Mac.</p>
-      <a href="https://www.amazon.ca/dp/B08SUPLAPTOP/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 4 -->
+    <div class="product sante">
+      <img src="https://m.media-amazon.com/images/I/61G3kL2-KPL._AC_SL1500_.jpg" alt="Pistolet de massage">
+      <h3>Pistolet de massage musculaire</h3>
+      <p>6 têtes, pour la récupération sportive.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B08L9TC9S4?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 11 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Lampe de bureau LED tactile</h3>
-      <img src="https://m.media-amazon.com/images/I/61ZWVqCVK+L._AC_SL1500_.jpg" alt="Lampe de bureau" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Touch control, 3 modes de lumière, bras flexible.</p>
-      <a href="https://www.amazon.ca/dp/B08LAMPELED/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 5 -->
+    <div class="product mode">
+      <img src="https://m.media-amazon.com/images/I/61A1rkaI8rL._AC_SL1500_.jpg" alt="Lunettes de soleil polarisées">
+      <h3>Lunettes de soleil polarisées</h3>
+      <p>Protection UV400, design moderne.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B08BFM7MFT?tag=0c2-20" target="_blank">Voir sur Amazon</a>
+    </div>
+  <!-- Produit 51 -->
+    <div class="product maison">
+      <img src="https://m.media-amazon.com/images/I/81JyaZf1VKL._AC_SL1500_.jpg" alt="Diffuseur d’huiles essentielles">
+      <h3>Diffuseur d’huiles essentielles</h3>
+      <p>Ambiance relaxante, LED multicolores.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B07PGRBPH3?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 12 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Tapis de souris ergonomique avec repose-poignet</h3>
-      <img src="https://m.media-amazon.com/images/I/61TRh2OH7kL._AC_SL1500_.jpg" alt="Tapis souris ergonomique" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Confort max pour le poignet, parfait télétravail.</p>
-      <a href="https://www.amazon.ca/dp/B09TAPISPOIG/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-<div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Brosse de nettoyage électrique multifonction</h3>
-      <img src="https://m.media-amazon.com/images/I/71f3+SAX9DL._AC_SL1500_.jpg" alt="Brosse nettoyage électrique" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Idéale pour cuisine, salle de bain, carrelage.</p>
-      <a href="https://www.amazon.ca/dp/B09BRUSHX/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 52 -->
+    <div class="product electronique">
+      <img src="https://m.media-amazon.com/images/I/71Jb-6Yy-AL._AC_SL1500_.jpg" alt="Support de téléphone flexible">
+      <h3>Support de téléphone flexible</h3>
+      <p>Rotation 360°, pour lit ou bureau.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B08ZJ9VK5J?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 14 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Trépied flexible pour téléphone</h3>
-      <img src="https://m.media-amazon.com/images/I/71RQziiYy-L._AC_SL1500_.jpg" alt="Trépied téléphone" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Flexible, léger, parfait pour vlog et selfies.</p>
-      <a href="https://www.amazon.ca/dp/B08TRIPODFLEX/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 53 -->
+    <div class="product sante">
+      <img src="https://m.media-amazon.com/images/I/71c+Rm81YML._AC_SL1500_.jpg" alt="Tapis d’acupression">
+      <h3>Tapis d’acupression complet</h3>
+      <p>Massage naturel, soulage stress et tension.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B07P8B7YN5?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 15 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Mini projecteur portable HD</h3>
-      <img src="https://m.media-amazon.com/images/I/61ZnI+B-BCL._AC_SL1500_.jpg" alt="Mini projecteur" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Idéal pour films, présentations ou soirées.</p>
-      <a href="https://www.amazon.ca/dp/B08MINIPROJ/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 54 -->
+    <div class="product mode">
+      <img src="https://m.media-amazon.com/images/I/61uFw62n4iL._AC_SL1500_.jpg" alt="Sac à dos antivol">
+      <h3>Sac à dos antivol USB</h3>
+      <p>Chargeur intégré, compartiment ordinateur.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B074J9G35W?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 16 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Organisateur de câbles 5 pièces</h3>
-      <img src="https://m.media-amazon.com/images/I/81GVH7V7diL._AC_SL1500_.jpg" alt="Organisateur de câbles" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Range et fixe les câbles pour éviter les nœuds.</p>
-      <a href="https://www.amazon.ca/dp/B09ORGACABLES/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 55 -->
+    <div class="product electronique">
+      <img src="https://m.media-amazon.com/images/I/71oYg3pRWIL._AC_SL1500_.jpg" alt="Mini projecteur portable">
+      <h3>Mini projecteur LED</h3>
+      <p>Cinéma à domicile, compact et léger.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B086P8HW4M?tag=0c2-20" target="_blank">Voir sur Amazon</a>
+    </div>
+ <!-- Produit 101 -->
+    <div class="product maison">
+      <img src="https://m.media-amazon.com/images/I/71lLwD5Bt+L._AC_SL1500_.jpg" alt="Organisateur de tiroir">
+      <h3>Organisateur de tiroir pliable</h3>
+      <p>Parfait pour sous-vêtements ou accessoires.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B088KX7JWN?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 17 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Montre connectée homme & femme</h3>
-      <img src="https://m.media-amazon.com/images/I/61qPQB-sQEL._AC_SL1500_.jpg" alt="Montre connectée mixte" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Design élégant, suivis santé, notifications.</p>
-      <a href="https://www.amazon.ca/dp/B09SMARTWATCH/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 102 -->
+    <div class="product electronique">
+      <img src="https://m.media-amazon.com/images/I/81JDkkbWtdL._AC_SL1500_.jpg" alt="Clavier sans fil">
+      <h3>Clavier sans fil silencieux</h3>
+      <p>Connexion Bluetooth, idéal télétravail.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B07Y5VSRP9?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 18 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Porte-clé détecteur Bluetooth</h3>
-      <img src="https://m.media-amazon.com/images/I/61EUkLiUZ5L._AC_SL1500_.jpg" alt="Détecteur Bluetooth" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Ne perdez plus vos clés, sac ou portefeuille.</p>
-      <a href="https://www.amazon.ca/dp/B08KEYFINDER/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 103 -->
+    <div class="product mode">
+      <img src="https://m.media-amazon.com/images/I/81VGmndG1nL._AC_SL1500_.jpg" alt="Montre style militaire">
+      <h3>Montre digitale militaire étanche</h3>
+      <p>Design robuste pour sport et aventure.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B0855CQ36Z?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 19 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Veilleuse LED détecteur de mouvement</h3>
-      <img src="https://m.media-amazon.com/images/I/61pG9LWyGkL._AC_SL1500_.jpg" alt="Veilleuse détecteur" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>S’allume automatiquement, idéale pour couloir.</p>
-      <a href="https://www.amazon.ca/dp/B08VEILLEUSE/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 104 -->
+    <div class="product electronique">
+      <img src="https://m.media-amazon.com/images/I/71k45n6r7uL._AC_SL1500_.jpg" alt="Lampe bureau LED">
+      <h3>Lampe de bureau LED pliable</h3>
+      <p>3 modes d’éclairage, port USB.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B07S9X6YQX?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 20 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Mini humidificateur USB silencieux</h3>
-      <img src="https://m.media-amazon.com/images/I/61PoUjcaaOL._AC_SL1500_.jpg" alt="Mini humidificateur" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Parfait pour chambre, bureau ou voyage.</p>
-      <a href="https://www.amazon.ca/dp/B08HUMIDUSB/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 105 -->
+    <div class="product sante">
+      <img src="https://m.media-amazon.com/images/I/61jPIsXDQJL._AC_SL1000_.jpg" alt="Brosse à dents électrique">
+      <h3>Brosse à dents électrique rechargeable</h3>
+      <p>Minuteur intégré, douce pour les gencives.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B08LNV2RKG?tag=0c2-20" target="_blank">Voir sur Amazon</a>
+    </div>
+   <!-- Produit 151 -->
+    <div class="product maison">
+      <img src="https://m.media-amazon.com/images/I/81K9DYiOpVL._AC_SL1500_.jpg" alt="Boîte de rangement pliable">
+      <h3>Boîte de rangement pliable</h3>
+      <p>Poignée renforcée, tissu résistant.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B08XBC2M3N?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 21 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Organiseur de tiroir ajustable</h3>
-      <img src="https://m.media-amazon.com/images/I/81PZyIkqHDL._AC_SL1500_.jpg" alt="Organiseur tiroir" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Sépare et range vêtements, accessoires, etc.</p>
-      <a href="https://www.amazon.ca/dp/B08DRAWERORG/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 152 -->
+    <div class="product electronique">
+      <img src="https://m.media-amazon.com/images/I/61kn7UgksLL._AC_SL1500_.jpg" alt="Chargeur sans fil rapide">
+      <h3>Chargeur sans fil rapide 15W</h3>
+      <p>Compatible iPhone et Android.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B08J49F6K9?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 22 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Kit de nettoyage écran + clavier</h3>
-      <img src="https://m.media-amazon.com/images/I/71s6+EjEbtL._AC_SL1500_.jpg" alt="Kit nettoyage tech" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Tout-en-un pour téléphone, tablette, laptop.</p>
-      <a href="https://www.amazon.ca/dp/B09CLEANKIT/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 153 -->
+    <div class="product mode">
+      <img src="https://m.media-amazon.com/images/I/71DRmGEslWL._AC_SL1500_.jpg" alt="Bonnet hiver unisexe">
+      <h3>Bonnet d’hiver chaud unisexe</h3>
+      <p>Intérieur polaire, look urbain.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B09F9ZFL9Y?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 23 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Pochette étanche pour téléphone</h3>
-      <img src="https://m.media-amazon.com/images/I/71gFiW60LJL._AC_SL1500_.jpg" alt="Pochette étanche" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Protection IPX8, parfaite pour piscine ou plage.</p>
-      <a href="https://www.amazon.ca/dp/B08WATERCASE/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 154 -->
+    <div class="product sante">
+      <img src="https://m.media-amazon.com/images/I/71KHSM0PxWL._AC_SL1500_.jpg" alt="Tensiomètre électronique">
+      <h3>Tensiomètre électronique bras</h3>
+      <p>Écran LCD, mémoire jusqu’à 99 mesures.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B00GZ1VCVQ?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 24 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Souris ergonomique sans fil</h3>
-      <img src="https://m.media-amazon.com/images/I/61ZWT5xBDLL._AC_SL1500_.jpg" alt="Souris sans fil" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Design vertical, évite les douleurs du poignet.</p>
-      <a href="https://www.amazon.ca/dp/B08MOUSEERG/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
+    <!-- Produit 155 -->
+    <div class="product electronique">
+      <img src="https://m.media-amazon.com/images/I/71oFlKOm2EL._AC_SL1500_.jpg" alt="Caméra de sécurité WiFi">
+      <h3>Caméra de sécurité Wi-Fi HD</h3>
+      <p>Vision nocturne, alerte téléphone.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B08Z3JG8DH?tag=0c2-20" target="_blank">Voir sur Amazon</a>
+    </div>
+   <!-- Produit 251 -->
+    <div class="product maison">
+      <img src="https://m.media-amazon.com/images/I/71v+AO7cK1L._AC_SL1500_.jpg" alt="Cintres en velours">
+      <h3>Lot de cintres antidérapants en velours</h3>
+      <p>Robustes, parfaits pour vêtements légers.</p>
+      <a class="buy-button" href="https://www.amazon.ca/dp/B00JGGLVU4?tag=0c2-20" target="_blank">Voir sur Amazon</a>
     </div>
 
-    <!-- Produit Amazon 25 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Lampe veilleuse tactile 7 couleurs</h3>
-      <img src="https://m.media-amazon.com/images/I/61YGzNBwqJL._AC_SL1500_.jpg" alt="Lampe tactile LED" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Change de couleur, rechargeable, décorative.</p>
-      <a href="https://www.amazon.ca/dp/B08LAMPTOUCH/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+    <!-- ... Produits 252 à 300 ici ... -->
 
-  </section>
- <!-- 🟡 Suite des produits Amazon -->
-  <section>
-    <!-- Produit Amazon 26 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Écouteurs sans fil avec réduction de bruit</h3>
-      <img src="https://m.media-amazon.com/images/I/61tXCrvWSnL._AC_SL1500_.jpg" alt="Écouteurs sans fil" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Son stéréo HD, autonomie 24h, boîtier rechargeable.</p>
-      <a href="https://www.amazon.ca/dp/B09ECOUSANSF/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+  </div> <!-- Fin de .product-list -->
+</section>
 
-    <!-- Produit Amazon 27 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Stylo tactile multifonction 6 en 1</h3>
-      <img src="https://m.media-amazon.com/images/I/61gZTI2P9gL._AC_SL1500_.jpg" alt="Stylo multifonction" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Niveau, tournevis, règle, pointe tactile, et plus.</p>
-      <a href="https://www.amazon.ca/dp/B07STYLO6EN1/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+<section class="section" id="contact">
+  <h2>Nous contacter</h2>
+  <form class="contact-form">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required>
 
-    <!-- Produit Amazon 28 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Horloge LED murale moderne</h3>
-      <img src="https://m.media-amazon.com/images/I/71ODKrsfC3L._AC_SL1500_.jpg" alt="Horloge LED" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Design minimaliste, affichage clair et lumineux.</p>
-      <a href="https://www.amazon.ca/dp/B08HORLOGELED/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+    <label for="email">Courriel :</label>
+    <input type="email" id="email" name="email" required>
 
-    <!-- Produit Amazon 29 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Organiseur de câble bureau</h3>
-      <img src="https://m.media-amazon.com/images/I/61NyfQg+3PL._AC_SL1500_.jpg" alt="Organiseur câbles bureau" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Fixation adhésive, design discret et pratique.</p>
-      <a href="https://www.amazon.ca/dp/B08ORGACABLE2/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
 
-    <!-- (...) Produits 3
- <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Sac à dos antivol avec port USB</h3>
-      <img src="https://m.media-amazon.com/images/I/71ZlzAtM3tL._AC_SL1500_.jpg" alt="Sac à dos USB" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Compartiments sécurisés, recharge facile en déplacement.</p>
-      <a href="https://www.amazon.ca/dp/B08SACUSB/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
 
-    <!-- Produit Amazon 31 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Chargeur allume-cigare double USB</h3>
-      <img src="https://m.media-amazon.com/images/I/61LUAYxqgNL._AC_SL1500_.jpg" alt="Chargeur voiture USB" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Compact, recharge rapide pour 2 appareils simultanément.</p>
-      <a href="https://www.amazon.ca/dp/B08CARUSB/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+<footer class="footer">
+  <p>Merci de visiter LandoShop !</p>
+  <p>Suivez-nous sur :
+    <a href="#">Facebook</a> |
+    <a href="#">Instagram</a> |
+    <a href="#">TikTok</a> |
+    <a href="#">YouTube</a>
+  </p>
+</footer>
 
-    <!-- Produit Amazon 32 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Brosse nettoyante pour visage électrique</h3>
-      <img src="https://m.media-amazon.com/images/I/71X4ICkL1SL._AC_SL1500_.jpg" alt="Brosse visage" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Exfolie en douceur, nettoyage en profondeur quotidien.</p>
-      <a href="https://www.amazon.ca/dp/B08FACEBRUSH/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+<button onclick="topFunction()" id="scrollTopBtn" title="Retour en haut">↑</button>
 
-    <!-- Produit Amazon 33 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Mini imprimante photo Bluetooth</h3>
-      <img src="https://m.media-amazon.com/images/I/71Ab2ykP2tL._AC_SL1500_.jpg" alt="Imprimante photo portable" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Imprime instantanément depuis ton téléphone.</p>
-      <a href="https://www.amazon.ca/dp/B09MINIPRINT/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+<script>
+function filterCategory(category) {
+  const products = document.querySelectorAll('.product');
+  products.forEach(product => {
+    if (category === 'all' || product.classList.contains(category)) {
+      product.style.display = 'block';
+    } else {
+      product.style.display = 'none';
+    }
+  });
+}
 
-    <!-- Produit Amazon 34 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Ensemble d’ustensiles de cuisine en silicone</h3>
-      <img src="https://m.media-amazon.com/images/I/71S0BVaGFTL._AC_SL1500_.jpg" alt="Ustensiles silicone" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Résistants à la chaleur, manche bois, 11 pièces.</p>
-      <a href="https://www.amazon.ca/dp/B08KITCUISINE/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-   <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Thermomètre infrarouge sans contact</h3>
-      <img src="https://m.media-amazon.com/images/I/61Kk8rKxuEL._AC_SL1500_.jpg" alt="Thermomètre infrarouge" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Rapide et précis, idéal pour toute la famille.</p>
-      <a href="https://www.amazon.ca/dp/B08THERMOIR/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+function searchProducts() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const products = document.querySelectorAll(".product");
+  products.forEach(product => {
+    const text = product.textContent.toLowerCase();
+    product.style.display = text.includes(input) ? "block" : "none";
+  });
+}
 
-    <!-- Produit Amazon 36 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Boîte de rangement pliable en tissu</h3>
-      <img src="https://m.media-amazon.com/images/I/81C5vDxXy3L._AC_SL1500_.jpg" alt="Boîte de rangement" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Parfaite pour étagères, chambre ou placard.</p>
-      <a href="https://www.amazon.ca/dp/B09BOXFOLD/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
+let mybutton = document.getElementById("scrollTopBtn");
+window.onscroll = function () {
+  mybutton.style.display = document.documentElement.scrollTop > 100 ? "block" : "none";
+};
+function topFunction() {
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
-    <!-- Produit Amazon 37 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Distributeur automatique de savon</h3>
-      <img src="https://m.media-amazon.com/images/I/71iFpqikFqL._AC_SL1500_.jpg" alt="Distributeur savon automatique" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Hygiénique, capteur infrarouge, sans contact.</p>
-      <a href="https://www.amazon.ca/dp/B09SAVONAUTO/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-    <!-- Produit Amazon 38 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Kit de manucure électrique portable</h3>
-      <img src="https://m.media-amazon.com/images/I/71yGzM6OwCL._AC_SL1500_.jpg" alt="Kit manucure électrique" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Pour ongles naturels et gel, recharge USB.</p>
-      <a href="https://www.amazon.ca/dp/B09MANUKIT/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-    <!-- Produit Amazon 39 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Anneaux de lumière LED pour selfies</h3>
-      <img src="https://m.media-amazon.com/images/I/71Xolpg-giL._AC_SL1500_.jpg" alt="Anneaux selfie" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>3 tons de lumière, parfait pour vidéos, TikTok.</p>
-      <a href="https://www.amazon.ca/dp/B08RINGLED/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-    <!-- Produit Amazon 40 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Coussin de voyage à mémoire de forme</h3>
-      <img src="https://m.media-amazon.com/images/I/71pD1OQ+QXL._AC_SL1500_.jpg" alt="Coussin de voyage" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Support cervical optimal pour les longs trajets.</p>
-      <a href="https://www.amazon.ca/dp/B08COUSSINTRAVEL/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-    <!-- Produit Amazon 41 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Kit de pinceaux maquillage 24 pièces</h3>
-      <img src="https://m.media-amazon.com/images/I/61cKcAeJbzL._AC_SL1500_.jpg" alt="Pinceaux maquillage" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Complet pour teint, yeux, lèvres. Étui inclus.</p>
-      <a href="https://www.amazon.ca/dp/B08MAKEUPKIT/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-    <!-- Produit Amazon 42 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Support mural universel pour téléphone</h3>
-      <img src="https://m.media-amazon.com/images/I/61QQzw9D1mL._AC_SL1500_.jpg" alt="Support mural téléphone" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Colle sans perçage, idéal cuisine ou salle de bain.</p>
-      <a href="https://www.amazon.ca/dp/B09SUPPHONE/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-    <!-- Produit Amazon 43 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Boîte à bijoux avec miroir intégrée</h3>
-      <img src="https://m.media-amazon.com/images/I/71tgrQd3NXL._AC_SL1500_.jpg" alt="Boîte à bijoux" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Design élégant, compartiments bien pensés.</p>
-      <a href="https://www.amazon.ca/dp/B09BOXBIJOUX/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-    <!-- Produit Amazon 44 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Bande LED RGB télécommandée</h3>
-      <img src="https://m.media-amazon.com/images/I/71syv7SD0cL._AC_SL1500_.jpg" alt="Bande LED" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Multicolore, facile à poser, télécommande incluse.</p>
-      <a href="https://www.amazon.ca/dp/B09LEDRGBSTRIP/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-    <!-- Produit Amazon 45 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Balance de cuisine numérique</h3>
-      <img src="https://m.media-amazon.com/images/I/61bdWvXKh5L._AC_SL1500_.jpg" alt="Balance cuisine" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Mesure précise, écran rétroéclairé.</p>
-      <a href="https://www.amazon.ca/dp/B09BALANCEKITCH/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-    <!-- Produit Amazon 46 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Mini ventilateur USB portable</h3>
-      <img src="https://m.media-amazon.com/images/I/61yf5tHRAPL._AC_SL1500_.jpg" alt="Ventilateur USB" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Rechargeable, silencieux, parfait pour bureau.</p>
-      <a href="https://www.amazon.ca/dp/B09FANPORTABLE/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-    <!-- Produit Amazon 47 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Coupe-légumes multifonction 12 en 1</h3>
-      <img src="https://m.media-amazon.com/images/I/71hUnCPu1zL._AC_SL1500_.jpg" alt="Coupe-légumes" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Tranche, râpe, découpe rapidement tout aliment.</p>
-      <a href="https://www.amazon.ca/dp/B09VEGCHOPPER/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-    <!-- Produit Amazon 48 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Tapis d’acupression et oreiller</h3>
-      <img src="https://m.media-amazon.com/images/I/71Z8llHVkFL._AC_SL1500_.jpg" alt="Tapis acupression" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Soulage le stress, améliore la circulation.</p>
-      <a href="https://www.amazon.ca/dp/B09TAPISACUP/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-    <!-- Produit Amazon 49 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Lampe frontale LED rechargeable</h3>
-      <img src="https://m.media-amazon.com/images/I/61V+RV19l3L._AC_SL1500_.jpg" alt="Lampe frontale" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Idéale pour le camping, bricolage, jogging nocturne.</p>
-      <a href="https://www.amazon.ca/dp/B09FRONTLAMP/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-    <!-- Produit Amazon 50 -->
-    <div style="border:1px solid #ddd;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 0 10px #eee;">
-      <h3>Boîte à lunch électrique chauffante</h3>
-      <img src="https://m.media-amazon.com/images/I/81e1+N6AXDL._AC_SL1500_.jpg" alt="Boîte lunch chauffante" style="max-width:200px;display:block;margin-bottom:10px;">
-      <p>Parfaite pour le bureau, voiture ou chantier.</p>
-      <a href="https://www.amazon.ca/dp/B09LUNCHHEAT/?tag=toncodeaff-20" target="_blank" style="display:inline-block;padding:10px 15px;background-color:#FF9900;color:white;text-decoration:none;border-radius:5px;">Acheter sur Amazon</a>
-    </div>
-
-  </section>
-
+</body>
+</html>
