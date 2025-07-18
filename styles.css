@@ -80,19 +80,6 @@ body {
   margin-bottom: 10px;
 }
 
-.buy-button {
-  display: inline-block;
-  background-color: #0077aa;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.buy-button:hover {
-  background-color: #005f88;
-}
 .contact {
   background-color: #e0f7ff;
   padding: 40px 20px;
