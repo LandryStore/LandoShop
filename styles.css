@@ -164,3 +164,19 @@ body {
     grid-template-columns: 1fr;
   }
 }
+  .buy-button {
+      display: inline-block;
+      background-color: #ff9900;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3 ease, transform 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ } 
+
+.buy-button:hover { 
+      background-color: #cc7a00;
+      transform: scale(1.05);
+  } 
