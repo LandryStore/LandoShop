@@ -1,136 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LandoShop - Produits Amazon</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ma Boutique Express</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <header class="main-header">
-    <h1>Bienvenue sur LandoShop</h1>
-    <p>Découvrez une sélection de produits tendances à prix avantageux</p>
+  <header>
+    <h1>🛍️ Ma Boutique Express</h1>
+    <h2>par Landry de Pierre</h2>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="main-menu">
+      <a href="index.html">Accueil</a>
+      <a href="amazon-produits.html">Amazon</a>
+      <a href="aliexpress-produits.html">AliExpress</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
-  <nav class="menu">
-    <a href="#produits">Produits</a>
-    <a href="#contact">Contact</a>
-    <a href="#visites">Visites</a>
-  </nav>
+  <section class="message-accueil">
+    <marquee behavior="scroll" direction="left">✨ Bienvenue sur Ma Boutique Express – Créé par Landry de Pierre ✨</marquee>
+  </section>
 
-  <main id="produits">
-    <h2>Nos produits Amazon (300)</h2>
-    <div class="products-grid">
- <div class="product">
-        <img src="https://m.media-amazon.com/images/I/71kDw2N3HGL._AC_SL1500_.jpg" alt="Montre connectée fitness">
-        <h3>Montre connectée Fitness</h3>
-        <p>Suivi d’activité, fréquence cardiaque, waterproof.</p>
-        <a href="https://www.amazon.ca/dp/B0CXYZ01?tag=exemple-20" target="_blank" class="buy-button">Acheter sur Amazon</a>
-      </div>
+  <section class="search-section">
+    <input type="text" id="recherche" placeholder="Recherche un produit..." onkeyup="filtrerProduits()" />
+    <p id="compteur">0 produit</p>
+  </section>
 
-      <div class="product">
-        <img src="https://m.media-amazon.com/images/I/81OaXwn1x4L._AC_SL1500_.jpg" alt="Écouteurs sans fil Bluetooth">
-        <h3>Écouteurs Sans Fil Bluetooth</h3>
-        <p>Réduction de bruit, autonomie longue, boîtier de charge.</p>
-        <a href="https://amzn.to/4eWu6j3" target="_blank" class="buy-button">Acheter sur Amazon</a>
-      </div>
+  <section id="produits-container">
+    <!-- Aucun produit ici pour l’instant -->
+  </section>
 
-      <div class="product">
-        <img src="https://m.media-amazon.com/images/I/71ZSnMZfqGL._AC_SL1500_.jpg" alt="Tapis de yoga antidérapant">
-        <h3>Tapis de Yoga Antidérapant</h3>
-        <p>Confort optimal, épaisseur idéale, transport facile.</p>
-        <a href="https://www.amazon.ca/dp/B0CXYZ03?tag=exemple-20" target="_blank" class="buy-button">Acheter sur Amazon</a>
-      </div>
- <div class="product">
-        <img src="https://m.media-amazon.com/images/I/81x9UjeD5YL._AC_SL1500_.jpg" alt="Chargeur sans fil rapide">
-        <h3>Chargeur Sans Fil Rapide</h3>
-        <p>Compatible iPhone/Android, design compact, charge rapide.</p>
-        <a href="https://www.amazon.ca/dp/B0CXYZ51?tag=exemple-20" target="_blank" class="buy-button">Acheter sur Amazon</a>
-      </div>
+  <footer>
+    <p>Merci de votre visite sur Ma Boutique Express !</p>
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">YouTube</a>
+    </div>
+  </footer>
 
-      <div class="product">
-        <img src="https://m.media-amazon.com/images/I/81qPK7tS6sL._AC_SL1500_.jpg" alt="Sac à dos antivol USB">
-        <h3>Sac à Dos Antivol avec Port USB</h3>
-        <p>Poche secrète, port de charge intégré, confortable.</p>
-        <a href="https://www.amazon.ca/dp/B0CXYZ52?tag=exemple-20" target="_blank" class="buy-button">Acheter sur Amazon</a>
-      </div>
+  <a href="#" class="scroll-top" onclick="scrollToTop()">⬆️</a>
 
-      <div class="product">
-        <img src="https://m.media-amazon.com/images/I/71c5Z7d95jL._AC_SL1500_.jpg" alt="Bouteille d'eau pliable silicone">
-        <h3>Bouteille d’eau Pliable Silicone</h3>
-        <p>Réutilisable, légère, idéale pour le sport ou le voyage.</p>
-        <a href="https://www.amazon.ca/dp/B0CXYZ53?tag=exemple-20" target="_blank" class="buy-button">Acheter sur Amazon</a>
-      </div>
- <div class="product">
-        <img src="https://m.media-amazon.com/images/I/71vGJYtYw4L._AC_SL1500_.jpg" alt="Support téléphone voiture magnétique">
-        <h3>Support Téléphone Voiture Magnétique</h3>
-        <p>Rotation 360°, facile à fixer, maintien puissant.</p>
-        <a href="https://www.amazon.ca/dp/B0CXYZ151?tag=exemple-20" target="_blank" class="buy-button">Acheter sur Amazon</a>
-      </div>
+  <script>
+    function toggleMenu() {
+      let menu = document.getElementById("main-menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
 
-      <div class="product">
-        <img src="https://m.media-amazon.com/images/I/81fFQHoTz1L._AC_SL1500_.jpg" alt="Thermos isotherme inox">
-        <h3>Thermos Isotherme Inox</h3>
-        <p>Garde chaud ou froid, idéal pour le café ou le thé.</p>
-        <a href="https://www.amazon.ca/dp/B0CXYZ152?tag=exemple-20" target="_blank" class="buy-button">Acheter sur Amazon</a>
-      </div>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-      <div class="product">
-        <img src="https://m.media-amazon.com/images/I/81Rlzq-W-PL._AC_SL1500_.jpg" alt="Organisateur de câbles">
-        <h3>Organisateur de Câbles</h3>
-        <p>Gardez vos câbles bien rangés, adhésif et pratique.</p>
-        <a href="https://www.amazon.ca/dp/B0CXYZ153?tag=exemple-20" target="_blank" class="buy-button">Acheter sur Amazon</a>
-      </div>
- <div class="product">
-        <img src="https://m.media-amazon.com/images/I/71nSG4xzdzL._AC_SL1500_.jpg" alt="Lampe de lecture LED">
-        <h3>Lampe de Lecture LED Rechargeable</h3>
-        <p>Recharge USB, 3 niveaux de luminosité, flexible.</p>
-        <a href="https://www.amazon.ca/dp/B0CXYZ241?tag=exemple-20" target="_blank" class="buy-button">Acheter sur Amazon</a>
-      </div>
+    function filtrerProduits() {
+      let input = document.getElementById('recherche').value.toLowerCase();
+      let produits = document.getElementsByClassName('produit');
+      let compteur = 0;
+      for (let produit of produits) {
+        if (produit.innerText.toLowerCase().includes(input)) {
+          produit.style.display = "block";
+          compteur++;
+        } else {
+          produit.style.display = "none";
+        }
+      }
+      document.getElementById('compteur').innerText = compteur + " produits trouvés";
+    }
 
-      <div class="product">
-        <img src="https://m.media-amazon.com/images/I/61Z1wM0RcdL._AC_SL1500_.jpg" alt="Mini trépied pour smartphone">
-        <h3>Mini Trépied pour Smartphone</h3>
-        <p>Parfait pour vidéos, photos et appels vidéo.</p>
-        <a href="https://www.amazon.ca/dp/B0CXYZ242?tag=exemple-20" target="_blank" class="buy-button">Acheter sur Amazon</a>
-      </div>
-
-      <div class="product">
-        <img src="https://m.media-amazon.com/images/I/61J0BDJoRbL._AC_SL1500_.jpg" alt="Clé USB 128 Go">
-        <h3>Clé USB 128 Go Ultra Rapide</h3>
-        <p>Stockage fiable, haute vitesse, design compact.</p>
-        <a href="https://www.amazon.ca/dp/B0CXYZ243?tag=exemple-20" target="_blank" class="buy-button">Acheter sur Amazon</a>
-      </div>
-  <section id="visites" class="visites">
-      <h2>Nombre total de visiteurs</h2>
-      <div style="text-align:center; margin: 20px 0;">
-        <img src="https://www.cutercounter.com/hits.php?id=hrcxnkk&nd=6&style=2" border="0" alt="Compteur de visites">
-      </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="contact">
-      <h2>Contactez-nous</h2>
-      <form>
-        <input type="text" placeholder="Votre nom" required>
-        <input type="email" placeholder="Votre e-mail" required>
-        <textarea placeholder="Votre message" rows="4" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
-
-    <!-- Pied de page -->
-    <footer class="footer">
-      <p>Merci de visiter LandoShop - © 2025</p>
-      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Retour en haut</button>
-    </footer>
-
-  </main>
-<div style="text-align:center; margin-top: 40px;">
-  <p>Nombre total de visiteurs :</p>
-  <img src="https://www.cutercounter.com/hits.php?id=hrcxnkk&nd=6&style=2" border="0" alt="Compteur de visites">
-</div>
-
+    window.onload = function () {
+      document.getElementById('compteur').innerText = "0 produit";
+    };
+  </script>
 </body>
 </html>
