@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff5fa;
+  color: #333;
+}
+
+header {
+  background-color: #c2185b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 5px 0;
+  font-style: italic;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.message-accueil {
+  background: #f8bbd0;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+}
+
+.message-remerciement {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  color: #880e4f;
+}
+
+.produits-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.produit {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px #ccc;
+  padding: 15px;
+  text-align: center;
+}
+
+.produit img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #e91e63;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.search-container {
+  text-align: center;
+  padding: 10px;
+}
+
+.search-container input {
+  width: 80%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  background: #fce4ec;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ad1457;
+  font-weight: bold;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: #c2185b;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
