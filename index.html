@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ma Boutique Express</title>
+<style>
+:root {
+  --main-color: #ff9966;
+  --dark-color: #d85f4f;
+  --light-bg: #fff5f0;
+  --text-color: #3a1b1b;
+  --blue-scroll: #1a237e;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:var(--light-bg);color:var(--text-color);min-height:100vh;display:flex;flex-direction:column;}
+header{background:var(--dark-color);color:white;padding:1rem 0;text-align:center;position:sticky;top:0;z-index:1000;}
+.top-nav{display:flex;flex-direction:column;align-items:center;}
+.top-nav h1.logo{font-size:2rem;}
+.top-nav nav{margin-top:0.5rem;}
+.top-nav nav a{color:white;margin:0 10px;text-decoration:none;font-weight:bold;}
+.top-nav nav a:hover{color:#fff2e6;}
+.animated-welcome{font-size:1.4rem;margin-top:0.5rem;font-weight:bold;color:var(--blue-scroll);animation:slideMsg 13s linear infinite;white-space:nowrap;overflow:hidden;}
+@keyframes slideMsg{0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
+.top-bar{display:flex;justify-content:space-between;align-items:center;background:var(--main-color);color:white;padding:0.7rem 1rem;font-size:1rem;position:sticky;top:64px;z-index:900;}
+.top-bar input[type="search"]{padding:0.4rem 1rem;border-radius:30px;border:none;width:200px;}
+.top-bar input[type="search"]:focus{width:280px;outline:none;box-shadow:0 0 8px #f8bbd0;}
+main{flex-grow:1;padding:1rem;max-width:1400px;margin:auto;}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;}
+.carte-produit{position:relative;background:#fff;border:1px solid #ddd;border-radius:12px;padding:1rem;box-shadow:0 3px 10px rgba(0,0,0,0.1);display:flex;flex-direction:column;justify-content:space-between;transition:transform 0.3s ease;}
+.carte-produit:hover{transform:scale(1.03);}
+.carte-produit img{max-width:100%;height:auto;max-height:150px;object-fit:contain;border-radius:8px;margin-bottom:10px;}
+.carte-produit h3{font-size:1.1em;margin-bottom:8px;color:#111;}
+.carte-produit p.description{font-size:0.9em;color:#666;max-height:40px;overflow:hidden;margin-bottom:8px;}
+.carte-produit p.prix{font-size:1.1em;color:#B12704;font-weight:bold;margin:5px 0;}
+.bouton-amazon{display:inline-block;background-color:#FF9900;color:#111;padding:8px 16px;border-radius:25px;text-decoration:none;font-weight:bold;font-size:0.95em;align-self:start;transition:background-color 0.2s ease;}
+.bouton-amazon:hover{background-color:#e68a00;}
+.delete-btn{font-size:1.4rem;background:transparent;border:none;color:var(--dark-color);cursor:pointer;position:absolute;top:6px;right:10px;}
+.delete-btn:hover{color:red;}
+#scroll-top{position:fixed;bottom:25px;right:25px;background:var(--dark-color);color:white;border:none;border-radius:50%;padding:0.6rem 0.8rem;font-size:1.3rem;cursor:pointer;display:none;box-shadow:0 2px 8px rgba(0,0,0,0.3);z-index:999;}
+footer{background:var(--dark-color);color:white;text-align:center;padding:1rem 0;position:fixed;bottom:0;left:0;right:0;z-index:1000;}
+footer .socials a{font-size:1.3rem;margin:0 6px;color:#ffe6cc;text-decoration:none;}
+.hidden{display:none!important;}
+.fade-out{animation:fadeOut 0.4s forwards;}
+@keyframes fadeOut{to{opacity:0;transform:scale(0.8);}}
+.thanks-message{position:fixed;bottom:80px;right:30px;background:var(--main-color);color:white;padding:0.8rem 1.2rem;border-radius:30px;font-weight:bold;box-shadow:0 0 12px #d2845f;z-index:9999;}
+.fade-out-thanks{opacity:0;transition:opacity 1s ease;}
+</style>
+</head>
+<body>
+<header>
+  <div class="top-nav">
+    <h1 class="logo">Ma Boutique Express</h1>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Amazon</a>
+      <a href="#">AliExpress</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+  <p class="animated-welcome">bienvenue sur ma boutique express, créé par Landry-de-Pierre</p>
+</header>
+<section class="top-bar">
+  <div>Produits disponibles : <span id="product-count">0</span></div>
+  <input type="search" id="search-input" placeholder="Rechercher un produit..." />
+</section>
+<main>
+  <div id="product-list" class="products-grid">
+
+    <!-- 🔹 EXEMPLES — À remplacer/compléter avec tous les produits LOTS 1 → 4 -->
+    <div class="carte-produit" data-name="Apple iPhone 14 128Go Minuit renouvelé">
+      <button class="delete-btn" title="Supprimer">×</button>
+      <a href="https://amzn.to/3UP9MH2" target="_blank">
+        <img src="https://m.media-amazon.com/images/I/41dhmioffWL._AC_SL1000_.jpg" alt="Apple iPhone 14">
+      </a>
+      <h3>Apple iPhone 14 (128 Go) - Minuit (renouvelé)</h3>
+      <p class="description">Un téléphone puissant et fiable...</p>
+      <p class="prix">829,00 $</p>
+      <a href="https://amzn.to/3UP9MH2" target="_blank" class="bouton-amazon">Acheter sur Amazon</a>
+    </div>
+
+    <!-- Ici suivre le même format pour coller tous tes produits -->
+
+  </div>
+</main>
+<button id="scroll-top" title="Remonter">⬆️</button>
+<footer>
+  <div class="socials">
+    <a href="https://facebook.com" target="_blank">📘</a>
+    <a href="https://instagram.com" target="_blank">📸</a>
+    <a href="https://tiktok.com" target="_blank">🎵</a>
+    <a href="https://youtube.com" target="_blank">▶️</a>
+    <a href="https://google.com" target="_blank">🔎</a>
+  </div>
+  <p>© 2025 Ma Boutique Express – Landry de Pierre</p>
+</footer>
+<script>
+const productCountEl=document.getElementById('product-count');
+const productListEl=document.getElementById('product-list');
+const searchInput=document.getElementById('search-input');
+const scrollTopBtn=document.getElementById('scroll-top');
+
+function updateCount(){
+  const visibleProducts=productListEl.querySelectorAll('.carte-produit:not(.hidden)');
+  productCountEl.textContent=visibleProducts.length;
+}
+
+searchInput.addEventListener('input',()=>{
+  const q=searchInput.value.toLowerCase();
+  productListEl.querySelectorAll('.carte-produit').forEach(prod=>{
+    const name=prod.textContent.toLowerCase();
+    prod.classList.toggle('hidden',!name.includes(q));
+  });
+  updateCount();
+});
+
+scrollTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+window.addEventListener('scroll',()=>{scrollTopBtn.style.display=window.scrollY>300?'block':'none';});
+
+productListEl.addEventListener('click',(e)=>{
+  if(e.target.classList.contains('delete-btn')){
+    const prod=e.target.closest('.carte-produit');
+    prod.classList.add('fade-out');
+    setTimeout(()=>{
+      prod.remove();
+      updateCount();
+      showThanksMessage();
+    },400);
+  }
+});
+
+function showThanksMessage(){
+  let thanks=document.createElement('div');
+  thanks.className='thanks-message';
+  thanks.textContent='Merci pour votre visite !';
+  document.body.appendChild(thanks);
+  setTimeout(()=>{
+    thanks.classList.add('fade-out-thanks');
+    setTimeout(()=>thanks.remove(),1000);
+  },2000);
+}
+
+updateCount();
+</script>
+</body>
+</html>
